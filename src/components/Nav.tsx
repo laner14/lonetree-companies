@@ -32,7 +32,7 @@ export default function Nav() {
             {link.label}
           </Link>
         ))}
-        <a href="#" className="nav-login">
+        <a href="https://lonetree.investnext.com" target="_blank" rel="noopener noreferrer" className="nav-login">
           Investor Portal
         </a>
       </div>

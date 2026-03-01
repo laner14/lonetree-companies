@@ -28,9 +28,13 @@ export default function Footer() {
 
         <div className="footer-col">
           <h5>Partners</h5>
-          {footerLinks.partners.map((link) => (
-            <Link key={link.href} href={link.href}>{link.label}</Link>
-          ))}
+          {footerLinks.partners.map((link) =>
+            link.href.startsWith("http") ? (
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+            ) : (
+              <Link key={link.href} href={link.href}>{link.label}</Link>
+            )
+          )}
         </div>
 
         <div className="footer-col">

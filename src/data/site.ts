@@ -28,7 +28,7 @@ export const footerLinks = {
   partners: [
     { label: "Become a Partner", href: "/partner" },
     { label: "Investment Process", href: "/investment-process" },
-    { label: "Investor Portal", href: "#" },
+    { label: "Investor Portal", href: "https://lonetree.investnext.com" },
   ],
   connect: [
     { label: "Contact Us", href: "/contact" },

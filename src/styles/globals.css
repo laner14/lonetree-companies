@@ -171,15 +171,15 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 /* ============================================================
    TEAM CARDS
    ============================================================ */
-.team-grid{display:grid;grid-template-columns:1fr;gap:0}
-.team-card{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--border);align-items:start;transition:all .3s}
-.team-card:last-child{border-bottom:none}
-.team-card:hover{padding-left:8px}
-.team-photo-sq{width:100px;height:100px;background:var(--light-grey);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:36px 24px;transition:all .4s}
+.team-card:hover{border-color:var(--navy-border);box-shadow:0 8px 32px rgba(26,39,68,.06);transform:translateY(-3px)}
+.team-photo-sq{width:100px;height:100px;background:var(--light-grey);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
 .team-photo-sq .initials{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--navy);opacity:.4}
-.team-info h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:4px}
-.team-info .title{font-size:13px;font-weight:600;color:var(--navy);letter-spacing:.3px;margin-bottom:12px}
-.team-info p{font-size:14px;line-height:1.7;color:var(--text-body);font-weight:300;margin-bottom:14px}
+.team-info{display:flex;flex-direction:column;align-items:center}
+.team-info h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin-bottom:4px}
+.team-info .title{font-size:12px;font-weight:600;color:var(--navy);letter-spacing:.3px;margin-bottom:12px}
+.team-info p{font-size:13px;line-height:1.7;color:var(--text-body);font-weight:300;margin-bottom:14px}
 .creds{display:flex;gap:8px;flex-wrap:wrap}
 .creds span{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:.5px;padding:4px 12px;background:var(--navy-faint);border-radius:4px}
 .placeholder-badge{display:inline-block;font-size:11px;font-weight:600;color:var(--grey);letter-spacing:.5px;padding:4px 12px;background:var(--light-grey);border-radius:4px;margin-top:8px}
@@ -407,6 +407,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .platform-entity:nth-child(2){border-radius:0 8px 0 0}
   .platform-entity:nth-child(3){border-radius:0 0 0 8px}
   .platform-entity:last-child{border-radius:0 0 8px 0}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
   .project-grid{grid-template-columns:1fr}
   .track-grid{grid-template-columns:1fr}
   .pro-track{grid-template-columns:1fr}
@@ -454,7 +455,8 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .platform-entity:first-child{border-radius:8px 8px 0 0!important}
   .platform-entity:last-child{border-radius:0 0 8px 8px!important}
   .platform-entity .arrow{display:none}
-  .team-card{grid-template-columns:80px 1fr;gap:20px}
+  .team-grid{grid-template-columns:1fr}
+  .team-card{padding:28px 20px}
   .team-photo-sq{width:80px;height:80px}
   .expertise-grid{grid-template-columns:1fr}
   .footer{padding:48px 20px 0}

@@ -4,9 +4,9 @@
 
 export const contactInfo = [
   { label: "Headquarters", value: "1606 Spanish Fork Parkway, Suite 102\nSpanish Fork, UT 84660", isHtml: true },
-  { label: "Investment Inquiries", value: "invest@lonetreecompanies.com", href: "mailto:invest@lonetreecompanies.com" },
-  { label: "Municipal & Development Partnerships", value: "partnerships@lonetreecompanies.com", href: "mailto:partnerships@lonetreecompanies.com" },
-  { label: "General Inquiries", value: "info@lonetreecompanies.com", href: "mailto:info@lonetreecompanies.com" },
+  { label: "Investment Inquiries", value: "invest@lonetreeusa.com", href: "mailto:invest@lonetreeusa.com" },
+  { label: "Municipal & Development Partnerships", value: "partnerships@lonetreeusa.com", href: "mailto:partnerships@lonetreeusa.com" },
+  { label: "General Inquiries", value: "info@lonetreeusa.com", href: "mailto:info@lonetreeusa.com" },
   { label: "Existing Investors", value: "Access Investor Portal →", href: "https://lonetree.investnext.com/" },
 ];
 
