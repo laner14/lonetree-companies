@@ -1,4 +1,5 @@
 import Link from "next/link";
+import InvestorCTA from "@/components/InvestorCTA";
 import {
   heroStats,
   thesisPoints,
@@ -116,6 +117,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* INVESTOR CTA */}
+      <InvestorCTA />
     </>
   );
 }

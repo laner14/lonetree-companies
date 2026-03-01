@@ -23,7 +23,7 @@ export const approachItems = [
   "Market-rate housing without subsidy dependency",
   "Master-planned neighborhoods, not isolated apartment blocks",
   "In-house property management for ongoing stewardship",
-  "Builder partnerships with nationally recognized firms",
+  "Builder partnerships with nationally recognized construction firms",
   "Transparent reporting to both investors and city partners",
 ];
 
@@ -41,7 +41,7 @@ export const impactStories = [
   {
     tag: "Builder Partnerships",
     title: "National builders, local execution",
-    description: "By partnering with D.R. Horton, Summit Homes, and Lennar, we bring national-scale construction quality and purchasing power to secondary markets — delivering better homes at more efficient cost basis than local-only builders can achieve.",
+    description: "By partnering with nationally recognized builders, we bring national-scale construction quality and purchasing power to secondary markets — delivering better homes at more efficient cost basis than local-only builders can achieve.",
   },
   {
     tag: "Long-Term Stewardship",

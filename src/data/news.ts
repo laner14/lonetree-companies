@@ -34,8 +34,8 @@ export const newsItems = [
   {
     date: "2025",
     category: "Builder Relations",
-    title: "D.R. Horton takedown agreements executed",
-    description: "National builder takedown agreements executed across Redbud (120 units, KCK) and Magnolia Fields (118 units, Gardner) — validating market demand and creating built-in exit certainty.",
+    title: "National builder takedown agreements executed",
+    description: "Builder takedown agreements executed across Redbud (120 units, KCK) and Magnolia Fields (118 units, Gardner) — validating market demand and creating built-in exit certainty.",
   },
   {
     date: "2025",
@@ -47,6 +47,6 @@ export const newsItems = [
     date: "2025",
     category: "Industry",
     title: "Washington JV developments pass 160 units delivered",
-    description: "The Meadows (Sunnyside, 88 units) and Sunridge (Kennewick, 166 units) continue delivering units in partnership with North 44 Group — 163 units completed to date across the two Washington communities.",
+    description: "The Meadows (Sunnyside, 88 units) and Sunridge (Kennewick, 166 units) continue delivering units through joint venture partnerships — 163 units completed to date across the two Washington communities.",
   },
 ];

@@ -70,7 +70,7 @@ export const projects: Project[] = [
     status: "Delivering",
     category: "active",
     type: "BTR",
-    description: "Large-scale build-to-rent community in the Tri-Cities market featuring bungalows, townhomes, and detached single-family homes. JV partnership with North 44 Group and Simplicity Homes. 118 of 166 units delivered.",
+    description: "Large-scale build-to-rent community in the Tri-Cities market featuring bungalows, townhomes, and detached single-family homes. Joint venture partnership with 118 of 166 units delivered.",
     stats: [
       { value: "166", label: "Total Units" },
       { value: "30", label: "Acres" },
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     status: "Delivering",
     category: "active",
     type: "MFG",
-    description: "Manufactured housing community in the Yakima Valley serving the agricultural and regional workforce. JV partnership with North 44 Group and Champion Homes. 45 of 88 units delivered.",
+    description: "Manufactured housing community in the Yakima Valley serving the agricultural and regional workforce. Joint venture partnership with 45 of 88 units delivered.",
     stats: [
       { value: "88", label: "Total Units" },
       { value: "15", label: "Acres" },
