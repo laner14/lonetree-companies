@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/data/site";
@@ -36,9 +37,14 @@ export default function Nav() {
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`}>
       <Link href="/" className="nav-logo">
-        <div className="nav-wordmark">
-          LONE TREE <span>COMPANIES</span>
-        </div>
+        <Image
+          src="/logo.png"
+          alt="Lone Tree Companies"
+          width={176}
+          height={28}
+          priority
+          style={{ height: 28, width: "auto" }}
+        />
       </Link>
 
       {/* Hamburger button — visible on mobile only */}
