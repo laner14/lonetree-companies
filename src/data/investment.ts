@@ -34,8 +34,8 @@ export const whyLoneTree = [
     description: "Most sponsors raise capital and outsource everything else. We source, entitle, build, and manage every asset in-house — four entities, one P&L, one accountability chain. Your capital doesn't leak to misaligned subcontractors.",
   },
   {
-    title: "Conservative Land Basis",
-    description: "We acquire raw land in secondary markets at a fraction of infill or stabilized-asset pricing. Lower cost basis means wider margins, more downside protection, and better risk-adjusted returns for LP partners.",
+    title: "Strategic Land Sourcing",
+    description: "We secure prime land positions through strategic relationships with local brokers, landowners, and municipal leaders — often before sites hit the open market. A collaborative, pre-emptive approach to city engagement means we enter each deal with local support already in place.",
   },
   {
     title: "Entitlement Risk Removed",
