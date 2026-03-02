@@ -90,7 +90,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
    SECTIONS
    ============================================================ */
 .section{padding:100px 72px;border-bottom:1px solid var(--border)}
-.section-grey{background:var(--light-grey)}
+.section-grey,.section-alt{background:var(--light-grey)}
 .section-label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:10px}
 .section-label::before{content:'';width:20px;height:2px;background:var(--navy)}
 .section-label.center{justify-content:center}
@@ -119,23 +119,6 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 .thesis-point .num{font-family:'Playfair Display',serif;font-size:32px;font-weight:300;color:var(--navy);opacity:.3}
 .thesis-point h4{font-size:16px;font-weight:600;color:var(--text-black);margin-bottom:6px}
 .thesis-point p{font-size:14px;line-height:1.6;color:var(--dark-grey);font-weight:300}
-
-/* ============================================================
-   MUNICIPAL (Homepage dark section)
-   ============================================================ */
-.municipal{padding:100px 72px;background:var(--navy);border-bottom:none;position:relative;overflow:hidden}
-.municipal::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.03) 0%,transparent 60%)}
-.municipal-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1}
-.municipal .section-label{color:rgba(255,255,255,.5)}
-.municipal .section-label::before{background:rgba(255,255,255,.3)}
-.municipal h2{color:#fff}
-.municipal h2 em{color:rgba(255,255,255,.6)}
-.municipal-desc{font-size:17px;line-height:1.8;color:rgba(255,255,255,.6);font-weight:300;margin-bottom:56px}
-.muni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
-.muni-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:28px;transition:all .4s}
-.muni-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);transform:translateY(-3px)}
-.muni-card h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px}
-.muni-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);font-weight:300}
 
 /* ============================================================
    PLATFORM (Homepage)
@@ -453,15 +436,14 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
    ============================================================ */
 @media(max-width:1024px){
   .nav{padding:16px 32px}
+  .nav.scrolled{padding:14px 32px}
   .hero{padding:140px 32px 80px}
   .hero h1{font-size:48px}
   .section{padding:80px 32px}
-  .municipal{padding:80px 32px}
   .page-header{padding:110px 32px 32px}
   .page-header h1{font-size:36px}
   .ticker{padding:36px 32px;gap:40px;flex-wrap:wrap}
   .thesis-grid{grid-template-columns:1fr;gap:48px}
-  .muni-grid{grid-template-columns:1fr}
   .platform-row{grid-template-columns:repeat(2,1fr)}
   .platform-entity:first-child{border-radius:8px 0 0 0}
   .platform-entity:nth-child(2){border-radius:0 8px 0 0}
@@ -513,6 +495,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 
 @media(max-width:640px){
   .nav{padding:14px 20px}
+  .nav.scrolled{padding:14px 20px}
   .hero{padding:110px 20px 60px}
   .hero::before{width:100%;clip-path:polygon(0 60%,100% 30%,100% 100%,0% 100%);opacity:.5}
   .hero h1{font-size:32px}
@@ -521,14 +504,16 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .hero-ctas a{text-align:center;justify-content:center}
   .section{padding:60px 20px}
   .section h2{font-size:30px}
-  .municipal{padding:60px 20px}
   .page-header{padding:90px 20px 24px}
   .page-header h1{font-size:26px}
   .page-header .subtitle{font-size:15px}
   .ticker{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding:36px 20px}
   .ticker-item .val{font-size:26px}
   .ticker-item .lab{font-size:10px}
+  .ticker-item:last-child:nth-child(odd){grid-column:1 / -1}
   .summary-bar{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .summary-item .val{font-size:24px}
+  .summary-item:last-child:nth-child(odd){grid-column:1 / -1}
   .platform-row{grid-template-columns:1fr}
   .platform-entity{border-radius:0!important}
   .platform-entity:first-child{border-radius:8px 8px 0 0!important}
@@ -569,6 +554,4 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .quote-block{padding:36px 20px}
   .quote-block blockquote{font-size:18px}
   .contact-form{padding:28px}
-  .municipal-desc{font-size:15px}
-  .muni-card{padding:22px}
 }

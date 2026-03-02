@@ -28,6 +28,14 @@ export const teamMembers: TeamMember[] = [
     credentials: ["Capital Markets", "Construction Finance", "$1B+ Funded"],
   },
   {
+    name: "Conner Jensen",
+    initials: "CJ",
+    title: "Lone Tree Companies",
+    bio: "Full bio and details coming soon.",
+    credentials: [],
+    pending: true,
+  },
+  {
     name: "Jenny Nielson",
     initials: "JN",
     title: "Partner & CEO — Lone Tree Land & Development",
@@ -68,14 +76,6 @@ export const teamMembers: TeamMember[] = [
     title: "CEO — Ameritrue Property Management",
     bio: "Provides strategic leadership for Ameritrue's growth and operational expansion. Focused on scaling the property management platform to support Lone Tree's growing BTR portfolio while maintaining the specialized, hands-on management approach that defines Ameritrue's service model.",
     credentials: ["Strategic Growth", "Operations", "Portfolio Mgmt"],
-  },
-  {
-    name: "Conner Jensen",
-    initials: "CJ",
-    title: "Lone Tree Companies",
-    bio: "Full bio and details coming soon.",
-    credentials: [],
-    pending: true,
   },
 ];
 
