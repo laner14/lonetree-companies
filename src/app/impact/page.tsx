@@ -10,8 +10,8 @@ export default function ImpactPage() {
         </h1>
         <p className="subtitle">
           Every project tells two stories: the housing a community gained and the
-          investment thesis that funded it. Across 1,100+ units in four states,
-          here&apos;s how our model creates shared value.
+          investment thesis that funded it. Here&apos;s how our model creates
+          shared value across every market we enter.
         </p>
       </header>
 
@@ -52,16 +52,15 @@ export default function ImpactPage() {
                 Impact isn&apos;t a marketing exercise — it&apos;s our <em>business model</em>
               </h2>
               <p>
-                Most developers treat community impact as a footnote. We treat it as
-                the thesis. When housing targets households earning $55K–$70K in
-                metros with strong demographic tailwinds, the projects are better,
-                the risk is lower, and the returns are more durable.
+                When housing targets households earning $55K–$95K in metros with
+                strong demographic tailwinds, the projects are better, the risk
+                is lower, and the returns are more durable. That&apos;s the thesis.
               </p>
               <p>
-                Our competitive advantage is literally the goodwill we&apos;ve built
-                with municipalities. That advantage only works if we protect it — by
-                delivering on promises, maintaining communities long-term, and
-                staying honest about what we&apos;re building and why.
+                We deliver on promises, maintain communities long-term, and
+                stay honest about what we&apos;re building and why — because
+                that&apos;s what creates durable value for investors, residents,
+                and the cities where we operate.
               </p>
             </div>
             <div>

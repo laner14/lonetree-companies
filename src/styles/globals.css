@@ -392,6 +392,14 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 .disc-box h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px}
 .disc-box p{font-size:13px;line-height:1.7;color:var(--dark-grey);font-weight:300}
 
+/* Why Lone Tree differentiator grid */
+.why-lt-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.why-lt-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:36px;transition:all .4s;position:relative}
+.why-lt-card:hover{border-color:var(--navy-border);transform:translateY(-3px)}
+.why-lt-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--navy);opacity:.18;margin-bottom:12px}
+.why-lt-card h4{font-size:18px;font-weight:600;color:var(--text-black);margin-bottom:10px}
+.why-lt-card p{font-size:14px;line-height:1.7;color:var(--dark-grey);font-weight:300}
+
 /* ============================================================
    CONTACT PAGE
    ============================================================ */
@@ -481,6 +489,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .approach-pair{grid-template-columns:1fr;gap:48px}
   .impact-grid{grid-template-columns:1fr}
   .struct-grid{grid-template-columns:1fr;gap:48px}
+  .why-lt-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr;gap:48px}
   .featured-news{grid-template-columns:1fr}
   .featured-img{min-height:200px}
@@ -550,6 +559,8 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .featured-body h3{font-size:20px}
   .form-row{grid-template-columns:1fr}
   .params li{grid-template-columns:1fr;gap:4px}
+  .why-lt-grid{grid-template-columns:1fr}
+  .why-lt-card{padding:28px}
   .step-num{font-size:36px}
   .track-card{padding:28px}
   .pro-track{padding:28px}

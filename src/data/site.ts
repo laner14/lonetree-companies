@@ -49,7 +49,7 @@ export const heroStats = [
 export const thesisPoints = [
   {
     title: "Municipal Alignment",
-    description: "We engage cities before we acquire — shaping projects around community needs so every site has deep local support.",
+    description: "We work with city leadership early in the process — building local support that accelerates entitlements and reduces political risk.",
   },
   {
     title: "Integrated Execution",

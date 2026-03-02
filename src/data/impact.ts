@@ -17,21 +17,19 @@ export const featuredCase = {
 };
 
 export const approachItems = [
-  "Pre-development municipal engagement on every project",
-  "Zoning and density shaped by community input",
-  "Rents calibrated to actual local workforce incomes",
-  "Market-rate housing without subsidy dependency",
+  "Rents calibrated to actual local workforce incomes ($55K–$95K HHI)",
+  "Market-rate housing without subsidy dependency or LIHTC constraints",
   "Master-planned neighborhoods, not isolated apartment blocks",
-  "In-house property management for ongoing stewardship",
+  "In-house construction and property management under one platform",
   "Builder partnerships with nationally recognized construction firms",
-  "Transparent reporting to both investors and city partners",
+  "Transparent quarterly reporting to investors via dedicated portal",
 ];
 
 export const impactStories = [
   {
-    tag: "Municipal Partnership",
-    title: "City partnership in Gardner, Kansas",
-    description: "Gardner's city leadership proactively identified housing as a top priority. By engaging early and designing around their growth plan, Lone Tree earned entitlement support for Magnolia Fields — 118 townhome and duplex units on 18 acres. National builder takedown agreements are already in place, validating demand and compressing development risk.",
+    tag: "Market Execution",
+    title: "From entitlement to builder contracts in Gardner, Kansas",
+    description: "Gardner identified housing as a top growth priority. Lone Tree secured entitlements for Magnolia Fields — 118 townhome and duplex units on 18 acres — and locked in national builder takedown agreements, validating demand and compressing development risk before breaking ground.",
   },
   {
     tag: "Workforce Housing",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { processSteps, structureParams, disclosure } from "@/data/investment";
+import { processSteps, structureParams, whyLoneTree, disclosure } from "@/data/investment";
 
 export default function InvestmentProcessPage() {
   return (
@@ -72,6 +72,27 @@ export default function InvestmentProcessPage() {
           <div className="disc-box">
             <h4>Important Disclosure</h4>
             <p>{disclosure}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY LONE TREE */}
+      <section className="section">
+        <div className="section-inner">
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <div className="section-label center">Why Lone Tree</div>
+            <h2>
+              What sets our platform <em>apart</em>
+            </h2>
+          </div>
+          <div className="why-lt-grid">
+            {whyLoneTree.map((item, i) => (
+              <div className="why-lt-card" key={item.title}>
+                <div className="why-lt-num">{String(i + 1).padStart(2, "0")}</div>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

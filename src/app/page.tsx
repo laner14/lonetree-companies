@@ -4,7 +4,6 @@ import InvestorCTA from "@/components/InvestorCTA";
 import {
   heroStats,
   thesisPoints,
-  municipalCards,
   platformEntities,
 } from "@/data/site";
 
@@ -48,14 +47,14 @@ export default function Home() {
           <div>
             <div className="section-label">Investment Thesis</div>
             <h2>
-              We don&apos;t just build housing — we build{" "}
-              <em>city-endorsed communities</em>
+              A vertically integrated platform built for{" "}
+              <em>attainable housing</em>
             </h2>
             <p style={{ marginTop: 16 }}>
-              Every project begins with a conversation — with city councils,
-              planning departments, and community leaders. We shape our
-              developments around local needs, creating the housing people
-              actually want, at prices they can actually afford.
+              We acquire land, build communities, and manage long-term assets —
+              all under one roof. Every project is underwritten to institutional
+              standards and designed around the housing people actually need,
+              at prices they can actually afford.
             </p>
           </div>
           <div>
@@ -66,29 +65,6 @@ export default function Home() {
                   <h4>{point.title}</h4>
                   <p>{point.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MUNICIPAL PARTNERSHIP */}
-      <section className="municipal">
-        <div className="municipal-inner">
-          <div className="section-label center">City Partnership</div>
-          <h2>
-            Why cities choose to <em>work with us</em>
-          </h2>
-          <p className="municipal-desc">
-            We bring capital, construction capability, and long-term management
-            to the table — but more importantly, we bring a willingness to
-            listen and adapt to what communities actually need.
-          </p>
-          <div className="muni-grid">
-            {municipalCards.map((card) => (
-              <div className="muni-card" key={card.title}>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
               </div>
             ))}
           </div>

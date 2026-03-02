@@ -28,4 +28,23 @@ export const structureParams = [
   { label: "Reporting", value: "Quarterly updates via investor portal" },
 ];
 
+export const whyLoneTree = [
+  {
+    title: "Full-Cycle GP Capability",
+    description: "Most sponsors raise capital and outsource everything else. We source, entitle, build, and manage every asset in-house — four entities, one P&L, one accountability chain. Your capital doesn't leak to misaligned subcontractors.",
+  },
+  {
+    title: "Conservative Land Basis",
+    description: "We acquire raw land in secondary markets at a fraction of infill or stabilized-asset pricing. Lower cost basis means wider margins, more downside protection, and better risk-adjusted returns for LP partners.",
+  },
+  {
+    title: "Entitlement Risk Removed",
+    description: "The majority of our pipeline is already entitled or in active engineering. That means the highest-risk phase of development — securing government approvals — is behind us before capital is deployed.",
+  },
+  {
+    title: "Experienced Operators",
+    description: "Our leadership team brings decades of combined experience across real estate development, construction, capital markets, and property management — built across institutional and entrepreneurial platforms.",
+  },
+];
+
 export const disclosure = "This page is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Offers are made only to accredited investors through private placement memoranda. Past performance is not indicative of future results. Real estate investing involves substantial risks including the potential loss of principal. All investments should be evaluated with the guidance of qualified financial and legal advisors.";

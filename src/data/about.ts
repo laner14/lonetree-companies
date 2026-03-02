@@ -13,7 +13,7 @@ export const timeline = [
 ];
 
 export const values = [
-  { icon: "🤝", title: "City-First Development", description: "Every project begins with municipal engagement. We listen to what communities need before we draft a plan. Our best projects are ones the city helped shape." },
+  { icon: "🤝", title: "Collaborative Development", description: "Our best projects are shaped by the communities they serve. We engage local stakeholders early so every plan reflects real needs." },
   { icon: "📐", title: "Attainable by Design", description: "We build for households earning $55K–$95K — the workforce backbone of every growing city. Market-rate rents, no subsidy dependency, no LIHTC constraints." },
   { icon: "🔗", title: "Integrated Accountability", description: "Four entities covering the full lifecycle under one platform. One team responsible from raw land through stabilized operations." },
   { icon: "📊", title: "Institutional Discipline", description: "Every deal underwritten to institutional standards. Transparent fee structures. Conservative basis. Disciplined capital deployment." },
