@@ -118,6 +118,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PODCAST FEATURE */}
+      <section className="section section-grey">
+        <div className="section-inner podcast-feature">
+          <div className="podcast-text">
+            <div className="section-label">From Our Founder</div>
+            <h2>
+              Hear the story behind <em>Lone Tree</em>
+            </h2>
+            <p className="podcast-desc">
+              Lone Tree founder Jamis O&apos;Brien joined The Midnight Founders
+              Podcast to talk about building a vertically integrated real estate
+              platform, working alongside municipalities, and why attainable
+              housing is the most compelling opportunity in the market today.
+            </p>
+            <div className="podcast-meta">
+              <span className="podcast-show">The Midnight Founders Podcast</span>
+              <span className="podcast-guest">ft. Jamis O&apos;Brien</span>
+            </div>
+            <div className="podcast-links">
+              <a
+                href="https://open.spotify.com/show/7vg92Muk9APLd2l6hW2pB3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="podcast-link"
+              >
+                Spotify
+              </a>
+              <a
+                href="https://podcasts.apple.com/us/podcast/the-midnight-founders-podcast/id1632490024"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="podcast-link"
+              >
+                Apple Podcasts
+              </a>
+              <a
+                href="https://music.amazon.com/podcasts/67b443c3-5fb3-4c0a-970c-edb5fb718ec7/the-midnight-founders-podcast"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="podcast-link"
+              >
+                Amazon Music
+              </a>
+            </div>
+          </div>
+          <div className="podcast-player">
+            <div className="podcast-player-card">
+              <div className="podcast-icon">🎙</div>
+              <h4>The Midnight Founders Podcast</h4>
+              <p>Jamis O&apos;Brien — Founder, Lone Tree Companies</p>
+              <span className="podcast-topic">Real Estate &amp; Investing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* INVESTOR CTA */}
       <InvestorCTA />
     </>
