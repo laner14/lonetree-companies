@@ -31,8 +31,8 @@ export const geographies = [
 ];
 
 export const aboutPlatformEntities = [
-  { name: "Capital Partners", role: "Capital Formation", description: "Institutional capital formation and investor relations. $20M in private capital raised, providing the equity foundation for multi-state BTR strategy." },
-  { name: "Land & Development", role: "Acquisitions", description: "Demographic-driven site selection, land acquisition, and entitlement mastery. Controls 2,500+ fully entitled lots across multiple states." },
+  { name: "Capital Partners", role: "Capital Formation", description: "Institutional capital formation and investor relations — providing the equity foundation for our multi-state BTR strategy." },
+  { name: "Land & Development", role: "Acquisitions", description: "Demographic-driven site selection, land acquisition, and entitlement mastery across a growing multi-state pipeline." },
   { name: "Communities", role: "Construction", description: "Internal construction management overseeing site improvements, trade management, and quality/cost discipline from horizontal infrastructure through vertical delivery." },
   { name: "Ameritrue", role: "Property Management", description: "Full-service property management across UT, WA, WY, and NV. Founded 2014. Resident experience, operational continuity, and long-term stewardship." },
 ];

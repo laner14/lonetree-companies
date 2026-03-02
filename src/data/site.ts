@@ -86,12 +86,12 @@ export const platformEntities = [
   {
     name: "Capital Partners",
     role: "Capital Formation",
-    description: "Institutional capital formation, investor relations, and strategic capital deployment. $20M raised to date.",
+    description: "Institutional capital formation, investor relations, and strategic capital deployment across our multi-state portfolio.",
   },
   {
     name: "Land & Development",
     role: "Acquisitions",
-    description: "Demographic-driven site selection, land acquisition, and entitlement mastery across a pipeline of 2,500+ entitled lots.",
+    description: "Demographic-driven site selection, land acquisition, and entitlement mastery across a growing development pipeline.",
   },
   {
     name: "Communities",

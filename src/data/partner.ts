@@ -18,14 +18,14 @@ export const investorTrack: PartnerTrack = {
   badgeType: "investor",
   heading: "Invest in",
   headingEmphasis: "attainable housing",
-  description: "Institutional-quality real estate investment backed by $20M in private capital raised to date. Diversified exposure to one of America's most undersupplied asset classes — attainable housing in high-growth secondary markets with strong demographic tailwinds.",
+  description: "Institutional-quality real estate investment with diversified exposure to one of America's most undersupplied asset classes — attainable housing in high-growth secondary markets with strong demographic tailwinds.",
   items: [
     "506(b) SPV structures with institutional-grade underwriting",
-    "$25–30M typical project size with 4–5 year investment horizon",
+    "Target 20%+ fund-level IRR with 8% preferred return",
     "Integrated platform manages every phase — reducing execution risk",
     "Municipal alignment creates durable entitlements and faster approvals",
-    "Transparent fee structures benchmarked against industry standards",
-    "Active pipeline across Kentucky, Kansas, and Iowa",
+    "$100K minimum investment for accredited investors",
+    "Active pipeline across Kentucky, Kansas, Iowa, and Washington",
   ],
   ctaLabel: "View Investment Process →",
   ctaHref: "/investment-process",
@@ -101,7 +101,7 @@ export const faqs = [
   },
   {
     question: "What is the typical investment structure?",
-    answer: "Projects are structured as 506(b) SPVs with a 4–5 year build-stabilize-sell horizon. Typical project size is $25–30M total development cost.",
+    answer: "Projects are structured as 506(b) SPVs with a 4–5 year build-stabilize-sell horizon. Minimum investment is $100K with an 8% preferred return and 80/20 LP/GP split. See our Investment Process page for full details.",
   },
   {
     question: "How do you vet new professional partners?",

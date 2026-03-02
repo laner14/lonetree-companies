@@ -22,8 +22,8 @@ export default function AboutPage() {
             <div className="section-label">Our Story</div>
             <h2>A platform built for <em>what&apos;s missing</em></h2>
             <p>America&apos;s housing shortage isn&apos;t concentrated in Manhattan or San Francisco. It&apos;s in the secondary markets where household formation is strong, price-to-income ratios are favorable, and cooperative municipalities are eager for quality residential development.</p>
-            <p>Lone Tree was founded in 2020 to fill that gap. Not with subsidized housing or tax credit complexity, but with market-rate communities designed around real local incomes and built through genuine city partnership. From a single land acquisition in Kentucky, we&apos;ve grown into a vertically integrated, multi-state development platform with over $50M in land and development AUM.</p>
-            <p>Today, our integrated platform of four companies manages every phase of the development lifecycle — from demographic-driven site selection through construction, lease-up, and long-term property management — controlling a pipeline of 500+ acres and 2,500+ fully entitled residential lots across four states.</p>
+            <p>Lone Tree was founded in 2020 to fill that gap. Not with subsidized housing or tax credit complexity, but with market-rate communities designed around real local incomes and built through genuine city partnership. From a single land acquisition in Kentucky, we&apos;ve grown into a vertically integrated, multi-state development platform.</p>
+            <p>Today, our four-entity platform manages every phase of the development lifecycle — from demographic-driven site selection through construction, lease-up, and long-term property management.</p>
           </div>
           <div className="timeline">
             {timeline.map((item) => (

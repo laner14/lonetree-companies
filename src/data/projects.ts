@@ -27,11 +27,9 @@ export interface Project {
 
 // Summary bar stats — update these as totals change
 export const projectSummary = [
-  { value: "500+", label: "Acres Controlled" },
+  { value: "8", label: "Active Projects" },
   { value: "1,100+", label: "Total Units" },
   { value: "4", label: "States" },
-  { value: "8", label: "Active Projects" },
-  { value: "$50M+", label: "AUM" },
 ];
 
 // Filter categories

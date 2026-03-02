@@ -11,9 +11,8 @@ export default function InvestmentProcessPage() {
         </h1>
         <p className="subtitle">
           A transparent, institutional-quality process designed for accredited
-          investors seeking exposure to attainable housing — backed by $20M in
-          private capital raised and a pipeline of 1,100+ units across four
-          states.
+          investors seeking exposure to attainable housing in high-growth
+          secondary markets.
         </p>
       </header>
 
