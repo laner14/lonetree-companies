@@ -190,12 +190,8 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 .podcast-links{display:flex;gap:10px;flex-wrap:wrap}
 .podcast-link{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border:1px solid var(--border);border-radius:100px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--navy);text-decoration:none;transition:all .3s;letter-spacing:.3px}
 .podcast-link:hover{border-color:var(--navy);background:var(--navy-faint);transform:translateY(-1px)}
-.podcast-player-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:40px;text-align:center;transition:all .4s}
-.podcast-player-card:hover{border-color:var(--navy-border);box-shadow:0 8px 32px rgba(26,39,68,.06);transform:translateY(-3px)}
-.podcast-icon{font-size:48px;margin-bottom:20px}
-.podcast-player-card h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:var(--text-black);margin-bottom:8px}
-.podcast-player-card p{font-size:14px;color:var(--dark-grey);font-weight:400;margin-bottom:16px;line-height:1.5}
-.podcast-topic{display:inline-block;font-size:11px;font-weight:600;color:var(--navy);letter-spacing:1px;text-transform:uppercase;padding:6px 16px;background:var(--navy-faint);border-radius:100px}
+.podcast-img-wrap{border-radius:12px;overflow:hidden;box-shadow:0 12px 40px rgba(26,39,68,.1);transition:all .4s}
+.podcast-img-wrap:hover{box-shadow:0 16px 48px rgba(26,39,68,.15);transform:translateY(-4px)}
 
 /* ============================================================
    PROJECT CARDS
@@ -528,7 +524,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
   .platform-entity:first-child{border-radius:8px 8px 0 0!important}
   .platform-entity:last-child{border-radius:0 0 8px 8px!important}
   .platform-entity .arrow{display:none}
-  .podcast-player-card{padding:28px}
+  .podcast-img-wrap{max-width:320px;margin:0 auto}
   .investor-cta{padding:60px 20px}
   .investor-cta-text h2{font-size:26px}
   .investor-cta-form-wrap{padding:24px}

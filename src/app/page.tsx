@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import InvestorCTA from "@/components/InvestorCTA";
 import {
   heroStats,
@@ -164,11 +165,14 @@ export default function Home() {
             </div>
           </div>
           <div className="podcast-player">
-            <div className="podcast-player-card">
-              <div className="podcast-icon">🎙</div>
-              <h4>The Midnight Founders Podcast</h4>
-              <p>Jamis O&apos;Brien — Founder, Lone Tree Companies</p>
-              <span className="podcast-topic">Real Estate &amp; Investing</span>
+            <div className="podcast-img-wrap">
+              <Image
+                src="/podcast-jamis.png"
+                alt="Jamis O'Brien on The Midnight Founders Podcast"
+                width={380}
+                height={380}
+                style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }}
+              />
             </div>
           </div>
         </div>
