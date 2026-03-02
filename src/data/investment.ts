@@ -45,6 +45,10 @@ export const whyLoneTree = [
     title: "Experienced Operators",
     description: "Our leadership team brings decades of combined experience across real estate development, construction, capital markets, and property management — built across institutional and entrepreneurial platforms.",
   },
+  {
+    title: "National Reach, Not Local Limits",
+    description: "Most developers are confined to one or two metros where their crews and relationships live. Our team has deep experience entering new markets — assembling local contractor teams, building geo-specific budgets, and acquiring land from scratch. We've identified 45+ metros nationwide that meet our submarket criteria, and we can deploy into any of them.",
+  },
 ];
 
 export const disclosure = "This page is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Offers are made only to accredited investors through private placement memoranda. Past performance is not indicative of future results. Real estate investing involves substantial risks including the potential loss of principal. All investments should be evaluated with the guidance of qualified financial and legal advisors.";

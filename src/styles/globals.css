@@ -399,6 +399,7 @@ body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--wh
 .why-lt-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--navy);opacity:.18;margin-bottom:12px}
 .why-lt-card h4{font-size:18px;font-weight:600;color:var(--text-black);margin-bottom:10px}
 .why-lt-card p{font-size:14px;line-height:1.7;color:var(--dark-grey);font-weight:300}
+.why-lt-card:last-child:nth-child(odd){grid-column:1 / -1}
 
 /* ============================================================
    CONTACT PAGE
