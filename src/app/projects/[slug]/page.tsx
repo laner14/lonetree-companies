@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getProject, getPublishedProjects } from "@/data/projects";
+import { getProject, getPublishedProjects, type Project } from "@/data/projects";
 
 export async function generateStaticParams() {
   return getPublishedProjects().map((p) => ({ slug: p.slug }));
@@ -28,8 +28,8 @@ function statusColor(status: string) {
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = getProject(params.slug);
-  if (!project) notFound();
+  const project: Project | undefined = getProject(params.slug);
+  if (!project) return notFound();
 
   const hasImages = project.images.length > 0;
 
