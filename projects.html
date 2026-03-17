@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Lone Tree Companies</title>
+<link rel="icon" type="image/png" href="media/Lone Tree Symbol.png">
+<link rel="apple-touch-icon" href="media/Lone Tree Symbol.png">
+<meta name="description" content="Explore Lone Tree Companies' portfolio of build-to-rent communities across Kentucky, Indiana, Ohio, and Utah. Purpose-built developments designed with city partners for working families.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Lone Tree Companies">
+<meta property="og:description" content="Explore our portfolio of build-to-rent communities across Kentucky, Indiana, Ohio, and Utah.">
+<meta property="og:site_name" content="Lone Tree Companies">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects — Lone Tree Companies">
+<meta name="twitter:description" content="Explore our portfolio of build-to-rent communities across four states.">
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lone Tree Companies",
+  "description": "Lone Tree Companies builds attainable build-to-rent communities through city partnerships, disciplined capital, and integrated execution across the American South and Mountain West.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1606 Spanish Fork Pkwy, Suite 102",
+    "addressLocality": "Spanish Fork",
+    "addressRegion": "UT",
+    "postalCode": "84660",
+    "addressCountry": "US"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--off-white:#fafafa;--light-grey:#f3f4f6;--mid-grey:#e5e7eb;--grey:#9ca3af;--dark-grey:#6b7280;--navy:#1a2744;--navy-light:#2c3e5a;--navy-faint:rgba(26,39,68,.04);--navy-border:rgba(26,39,68,.12);--text-black:#111827;--text-body:#374151;--text-caption:#6b7280;--border:#e5e7eb;--border-light:#f0f0f0}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Outfit',sans-serif;color:var(--text-black);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 72px;background:#fff;backdrop-filter:blur(20px);border-bottom:1px solid var(--border-light);transition:all .4s}.nav.scrolled{padding:14px 72px;box-shadow:0 1px 12px rgba(0,0,0,.04)}.nav-logo{text-decoration:none}.nav-wordmark{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--navy);letter-spacing:1px}.nav-wordmark span{color:var(--navy)}.nav-links{display:flex;align-items:center;gap:36px}.nav-links a{font-size:13px;font-weight:500;color:var(--dark-grey);text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}.nav-links a:hover,.nav-links a.active{color:var(--navy)}.nav-login{padding:10px 28px!important;background:var(--navy)!important;color:#fff!important;border-radius:6px;font-weight:600!important;font-size:12px!important;letter-spacing:.5px;transition:all .3s!important}.nav-login:hover{background:var(--navy-light)!important}
+
+/* PAGE HEADER — navy centered */
+.page-header{padding:140px 72px 60px;position:relative;background:var(--navy);text-align:center}.page-eyebrow{font-size:12px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;justify-content:center;display:flex;align-items:center;gap:12px;animation:fadeIn .8s ease .2s both}.page-eyebrow::before{content:'';width:40px;height:2px;background:rgba(255,255,255,.3)}.page-header h1{font-family:'Playfair Display',serif;font-size:44px;line-height:1.15;font-weight:500;max-width:800px;margin:0 auto 12px;color:#fff;animation:fadeIn .8s ease .4s both}.page-header h1 em{font-style:italic;color:rgba(255,255,255,.6)}.page-header .subtitle{font-size:16px;line-height:1.6;color:rgba(255,255,255,.6);font-weight:300;max-width:660px;margin:0 auto;animation:fadeIn .8s ease .6s both}
+
+/* SECTIONS */
+.section{padding:56px 72px;border-bottom:1px solid var(--border)}.section-alt{background:var(--light-grey)}.section-label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:2px;background:var(--navy)}.section h2{font-family:'Playfair Display',serif;font-size:32px;line-height:1.25;font-weight:500;margin-bottom:12px}.section h2 em{font-style:italic;color:var(--navy)}.section-inner{max-width:1200px;margin:0 auto}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+.filter-btn{padding:6px 16px;font-size:12px;font-weight:500;color:var(--dark-grey);background:transparent;border:1px solid var(--border);border-radius:4px;cursor:pointer;transition:all .3s;font-family:'Outfit',sans-serif}
+.filter-btn:hover,.filter-btn.active{color:var(--navy);border-color:var(--navy-border);background:var(--navy-faint)}
+
+/* CATEGORY HEADERS */
+.category-header{margin-top:48px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--navy)}
+.category-header:first-of-type{margin-top:0}
+.category-header h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--text-black)}
+.category-header .cat-count{font-size:12px;color:var(--dark-grey);font-weight:400;margin-top:2px}
+
+/* PROJECT CARDS */
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project-card{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .4s;position:relative;display:flex;flex-direction:column}
+.project-card:hover{border-color:var(--navy-border);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.project-img{height:200px;background:linear-gradient(135deg,#f3f4f6 0%,#e8eaed 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.project-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+.project-img .placeholder{font-size:12px;color:var(--dark-grey);font-weight:500;letter-spacing:1px;text-transform:uppercase}
+.project-status{position:absolute;top:12px;right:12px;padding:4px 12px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.status-delivering{background:rgba(232,250,243,.95);color:#2d7a5f;border:1px solid rgba(45,122,95,.3)}
+.status-capital-raise{background:rgba(255,248,230,.95);color:#8a6520;border:1px solid rgba(180,130,50,.35)}
+.status-dev{background:rgba(230,240,255,.95);color:#2c3e5a;border:1px solid rgba(59,125,221,.3)}
+.project-body{padding:20px 24px 24px;flex:1;display:flex;flex-direction:column}
+.project-location{font-size:10px;font-weight:600;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.project-body h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--text-black);margin-bottom:8px}
+.project-body>p{font-size:13px;line-height:1.55;color:var(--dark-grey);font-weight:300;margin-bottom:16px;flex:1}
+.project-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.project-stat .num{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--text-black)}
+.project-stat .lbl{font-size:10px;color:var(--dark-grey);font-weight:500;letter-spacing:.5px;margin-top:2px}
+.project-detail-link{display:inline-block;margin-top:18px;padding:10px 24px;font-size:13px;font-weight:600;color:#fff;background:var(--navy);text-decoration:none;letter-spacing:.5px;border-radius:6px;transition:all .3s}
+.project-detail-link:hover{background:var(--navy-light);transform:translateY(-2px);box-shadow:0 4px 12px rgba(26,39,68,.2)}
+
+/* INVESTMENT OPPORTUNITY RIBBON */
+.invest-ribbon{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:rgba(180,130,50,.15);color:#8a6520;border:1px solid rgba(180,130,50,.3);z-index:2}
+
+/* BUILDER PARTNERSHIP CARDS */
+.builder-card{background:#fff;border:1px solid var(--border);border-left:4px solid var(--navy);border-radius:0 10px 10px 0;padding:24px 28px;transition:all .4s;position:relative}
+.builder-card:hover{border-color:var(--navy-border);border-left-color:var(--navy);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.builder-card .project-location{font-size:10px;font-weight:600;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.builder-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--text-black);margin-bottom:8px}
+.builder-card>p{font-size:13px;line-height:1.55;color:var(--dark-grey);font-weight:300;margin-bottom:16px}
+.builder-card .project-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.builder-card .project-status{position:absolute;top:12px;right:12px}
+.builder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+/* CTA SECTION */
+.cta-section{padding:64px 72px;background:var(--navy);text-align:center;border-bottom:none}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:32px;line-height:1.25;font-weight:500;color:var(--white);margin-bottom:12px;max-width:700px;margin-left:auto;margin-right:auto}
+.cta-section .cta-sub{font-size:15px;line-height:1.6;color:rgba(255,255,255,.7);font-weight:300;max-width:560px;margin:0 auto 28px}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{padding:12px 32px;background:var(--white);color:var(--navy);border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;font-family:'Outfit',sans-serif}
+.btn-primary:hover{background:var(--off-white);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.btn-outline{padding:12px 32px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.35);border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;font-family:'Outfit',sans-serif}
+.btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+
+/* FOOTER */
+.footer{padding:60px 72px 32px;border-top:1px solid var(--border)}.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid var(--border)}.footer-brand .bn{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--text-black)}.footer-brand .bn span{color:var(--navy)}.footer-brand p{font-size:14px;line-height:1.7;color:var(--dark-grey);margin-top:12px;max-width:280px}.footer-col h5{font-size:11px;font-weight:600;color:var(--dark-grey);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}.footer-col a{display:block;font-size:14px;color:var(--dark-grey);text-decoration:none;margin-bottom:12px;transition:color .3s}.footer-col a:hover{color:var(--text-black)}.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;padding-top:20px;font-size:12px;color:var(--dark-grey)}.footer-bottom a{color:var(--dark-grey);text-decoration:none;margin-left:24px}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .nav{padding:20px 32px}.nav.scrolled{padding:14px 32px}
+  .page-header{padding:120px 32px 40px}
+  .page-header h1{font-size:34px}
+  .summary-strip{padding:16px 32px}
+  .summary-bar{flex-wrap:wrap;gap:16px;justify-content:center}
+  .summary-item{min-width:120px}
+  .section{padding:40px 32px}
+  .project-grid{grid-template-columns:1fr}
+  .builder-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .cta-section{padding:48px 32px}
+  .cta-section h2{font-size:26px}
+}
+@media(max-width:640px){
+  .nav{padding:16px 20px}.nav.scrolled{padding:12px 20px}
+  .nav-links{gap:16px}
+  .page-header{padding:100px 20px 30px}
+  .page-header h1{font-size:28px}
+  .summary-strip{padding:14px 20px}
+  .summary-bar{gap:12px}
+  .summary-item .val{font-size:22px}
+  .section{padding:32px 20px}
+  .filter-bar{gap:6px}
+  .filter-btn{padding:5px 12px;font-size:11px}
+  .footer{padding:40px 20px 20px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.footer-col a.footer-newsletter{display:inline-block;margin-top:8px;padding:10px 20px;background:#fff;color:var(--navy);border-radius:5px;font-weight:600;font-size:13px;letter-spacing:.5px;transition:all .3s}.footer-newsletter:hover{background:rgba(255,255,255,.85);color:var(--navy)!important;transform:translateY(-2px)}
+
+/* HAMBURGER MENU */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:20px 24px;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid var(--border-light);font-size:14px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-login{margin-top:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="/"><img src="media/LTC Logo.png" alt="Lone Tree Companies" class="nav-logo-img" style="height:36px;width:auto;display:block;"></a>
+  <div class="nav-hamburger" id="navToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/projects.html" class="active">Projects</a>
+    <a href="/team.html">Team</a>
+    <a href="/partner.html">Partner</a>
+    <a href="/learn.html">Learn</a>
+    <a href="/contact.html">Contact</a>
+    <a href="https://lonetree.investnext.com/" target="_blank" class="nav-login">Investor Portal</a>
+  </div>
+</nav>
+
+<!-- PAGE HEADER — tight -->
+<header class="page-header">
+  <div class="page-eyebrow">Development Portfolio</div>
+  <h1>Purpose-built <em>communities</em></h1>
+  <p class="subtitle">Build-to-rent communities, builder dispositions, and JV developments in high-growth secondary markets &mdash; each shaped through collaboration with the cities that need them.</p>
+</header>
+
+<!-- PROJECT CARDS SECTION (no "Our Approach" or "Growth Trajectory") -->
+<section class="section">
+  <div class="section-inner">
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <button class="filter-btn active">All Projects</button>
+      <button class="filter-btn">Build-to-Rent</button>
+      <button class="filter-btn">Builder Partnerships</button>
+      <button class="filter-btn">Kentucky</button>
+      <button class="filter-btn">Kansas</button>
+      <button class="filter-btn">Iowa</button>
+      <button class="filter-btn">Washington</button>
+    </div>
+
+    <!-- CATEGORY A: ACTIVE CONSTRUCTION -->
+    <div class="category-header">
+      <h3>Active Construction</h3>
+      <div class="cat-count">2 projects &mdash; Washington JV developments with units delivering</div>
+    </div>
+    <div class="project-grid">
+
+      <!-- Sunridge -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/sunridge.png" alt="Sunridge — Kennewick, Washington">
+          <span class="project-status status-delivering">Delivering</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Kennewick, Washington</div>
+          <h3>Sunridge</h3>
+          <p>Large-scale build-to-rent community in the Tri-Cities market featuring bungalows, townhomes, and detached single-family homes. JV partnership with North 44 Group and Simplicity Homes.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">166</div><div class="lbl">Total Units</div></div>
+            <div class="project-stat"><div class="num">30</div><div class="lbl">Acres</div></div>
+            <div class="project-stat"><div class="num">BTR/JV</div><div class="lbl">Type</div></div>
+          </div>
+          <a href="/projects/hampton-hills.html" class="project-detail-link">View Development Details &rarr;</a>
+        </div>
+      </article>
+
+      <!-- The Meadows -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/meadows.png" alt="The Meadows — Sunnyside, Washington">
+          <span class="project-status status-delivering">Delivering</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Sunnyside, Washington</div>
+          <h3>The Meadows</h3>
+          <p>Manufactured housing community in the Yakima Valley serving the agricultural and regional workforce. JV partnership with North 44 Group and Champion Homes.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">88</div><div class="lbl">Total Units</div></div>
+            <div class="project-stat"><div class="num">15</div><div class="lbl">Acres</div></div>
+            <div class="project-stat"><div class="num">MFG/JV</div><div class="lbl">Type</div></div>
+          </div>
+          <a href="/projects/hampton-hills.html" class="project-detail-link">View Development Details &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CATEGORY B: BUILD-TO-RENT DEVELOPMENT -->
+    <div class="category-header">
+      <h3>Build-to-Rent Development</h3>
+      <div class="cat-count">4 projects &mdash; Purpose-built rental communities in KY and IA</div>
+    </div>
+    <div class="project-grid">
+
+      <!-- Hampton Hills (Flagship / Investment Opportunity) -->
+      <article class="project-card">
+        <div class="invest-ribbon">Investment Opportunity</div>
+        <div class="project-img">
+          <img src="media/hampton Hills site 1.png" alt="Hampton Hills — Richmond, Kentucky">
+          <span class="project-status status-capital-raise">Capital Raise</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Richmond, Kentucky</div>
+          <h3>Hampton Hills</h3>
+          <p>Flagship cottage-style BTR community on the I-75 corridor south of Lexington. Three floor plans designed for working families earning $55K&ndash;$95K. Capital raise closing with site work beginning Spring 2026.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">97</div><div class="lbl">BTR Units</div></div>
+            <div class="project-stat"><div class="num">22</div><div class="lbl">BTR Acres</div></div>
+            <div class="project-stat"><div class="num">Spring '26</div><div class="lbl">Start</div></div>
+          </div>
+          <a href="/projects/hampton-hills.html" class="project-detail-link">View Investment Details &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Oak Hills -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/oak hills aerial.jpg" alt="Oak Hills — Elizabethtown, Kentucky">
+          <span class="project-status status-dev">Engineering</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Elizabethtown, Kentucky</div>
+          <h3>Oak Hills</h3>
+          <p>Mixed-use residential development on 100 acres along the I-65 corridor south of Louisville. 128 townhomes and single-family rentals targeting the Fort Knox / GDRP employment corridor.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">128</div><div class="lbl">Units</div></div>
+            <div class="project-stat"><div class="num">100</div><div class="lbl">Acres</div></div>
+            <div class="project-stat"><div class="num">Late '26</div><div class="lbl">Start</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Woodgate -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/woodgate.jpg" alt="Woodgate — Richmond, Kentucky">
+          <span class="project-status status-dev">Design</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Richmond, Kentucky</div>
+          <h3>Woodgate</h3>
+          <p>Single-family BTR community serving the Richmond/Lexington corridor. Entitlements complete with horizontal design underway. Complements Hampton Hills in a proven market.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">97</div><div class="lbl">BTR Units</div></div>
+            <div class="project-stat"><div class="num">SFR</div><div class="lbl">Product</div></div>
+            <div class="project-stat"><div class="num">BTR</div><div class="lbl">Type</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Maple Heights -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/maple heights.jpg" alt="Maple Heights — Norwalk, Iowa">
+          <span class="project-status status-dev">Pre-Development</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Norwalk, Iowa</div>
+          <h3>Maple Heights</h3>
+          <p>Phase 1 of a 128-acre master plan in one of the Des Moines metro's fastest-growing suburbs. 100 townhome-style BTR units with strong population growth and collaborative city leadership.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">100</div><div class="lbl">Phase 1 Units</div></div>
+            <div class="project-stat"><div class="num">128</div><div class="lbl">Total Acres</div></div>
+            <div class="project-stat"><div class="num">BTR</div><div class="lbl">Type</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CATEGORY C: BUILDER PARTNERSHIPS -->
+    <div class="category-header">
+      <h3>Builder Partnerships</h3>
+      <div class="cat-count">2 projects &mdash; Finished lot sales to national homebuilders in the KC metro</div>
+    </div>
+    <div class="project-grid">
+
+      <!-- Redbud -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/Redbud Park.jpg" alt="Redbud Park — Kansas City, Kansas">
+          <span class="project-status status-dev">Entitled</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Kansas City, Kansas</div>
+          <h3>Redbud Park</h3>
+          <p>Twin-home lot development with executed national builder takedown agreements. Fully entitled with construction targeted April 2026. Delivering finished lots to one of America's largest home builders.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">120</div><div class="lbl">Lots</div></div>
+            <div class="project-stat"><div class="num">22</div><div class="lbl">Acres</div></div>
+            <div class="project-stat"><div class="num">Disposition</div><div class="lbl">Type</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Magnolia Fields -->
+      <article class="project-card">
+        <div class="project-img">
+          <img src="media/Magnolia Fields.png" alt="Magnolia Fields — Gardner, Kansas">
+          <span class="project-status status-dev">Civil Design</span>
+        </div>
+        <div class="project-body">
+          <div class="project-location">Gardner, Kansas</div>
+          <h3>Magnolia Fields</h3>
+          <p>Townhome and duplex lot development in one of the KC metro's fastest-growing suburbs. Civil design underway with national builder agreements in place.</p>
+          <div class="project-stats">
+            <div class="project-stat"><div class="num">118</div><div class="lbl">Lots</div></div>
+            <div class="project-stat"><div class="num">18</div><div class="lbl">Acres</div></div>
+            <div class="project-stat"><div class="num">Disposition</div><div class="lbl">Type</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="section-inner" style="text-align:center;">
+    <h2>See a project that aligns with your investment thesis?</h2>
+    <p class="cta-sub">We partner with aligned investors who share our commitment to building attainable housing in America's growth corridors.</p>
+    <div class="cta-buttons">
+      <a href="/contact.html" class="btn-primary">Schedule a Conversation</a>
+      <a href="#" class="btn-outline">Access Investor Portal</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="bn"><img src="data:image/png;base64,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" alt="Lone Tree Companies" style="height:28px;width:auto;filter:brightness(0) invert(1);"></div><p>Building attainable communities through city partnership, disciplined capital, and integrated execution.</p></div>
+    <div class="footer-col"><h5>Company</h5><a href="/about.html">About</a><a href="/team.html">Team</a><a href="/projects.html">Projects</a></div>
+    <div class="footer-col"><h5>Partners</h5><a href="/partner.html">Become a Partner</a><a href="/investment-process.html">Investment Process</a><a href="https://lonetree.investnext.com/" target="_blank">Investor Portal</a></div>
+    <div class="footer-col"><h5>Connect</h5><a href="/contact.html">Contact Us</a><a href="/news.html">News &amp; Media</a><a href="#" class="footer-newsletter" data-modal="newsletter">Sign Up for Our Newsletter →</a><a>1606 Spanish Fork Pkwy, Suite 102</a><a>Spanish Fork, UT 84660</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Lone Tree Companies</span><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Disclosures</a></div></div>
+</footer>
+
+<script>window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});</script>
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var links = document.querySelector('.nav-links');
+  if(toggle && links){
+    toggle.addEventListener('click', function(){
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    // Close menu when a link is clicked
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ toggle.classList.remove('open'); links.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+<!-- Inquiry Modal System -->
+<style>
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,39,68,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.modal-overlay.active{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:12px;width:440px;max-width:92vw;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.18);transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.4,0,.2,1);position:relative}
+.modal-overlay.active .modal-box{transform:translateY(0) scale(1)}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;background:rgba(255,255,255,.15);border-radius:50%;color:#fff;font-size:20px;line-height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:1}
+.modal-close:hover{background:rgba(255,255,255,.3)}
+.modal-head{background:var(--navy,#1a2744);padding:32px 36px 28px;border-radius:12px 12px 0 0}
+.modal-head h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#fff;margin-bottom:8px}
+.modal-head p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);font-weight:300}
+.modal-body{padding:28px 36px 32px}
+.modal-form .form-row{margin-bottom:18px}
+.modal-form label{display:block;font-size:13px;font-weight:600;color:var(--text-black,#111827);margin-bottom:6px;letter-spacing:.3px}
+.modal-form label .opt{font-weight:400;color:var(--grey,#9ca3af);font-size:12px}
+.modal-form input,.modal-form textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border,#e5e7eb);border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text-black,#111827);transition:border-color .2s;outline:none;background:#fff}
+.modal-form input:focus,.modal-form textarea:focus{border-color:var(--navy,#1a2744)}
+.modal-form input::placeholder,.modal-form textarea::placeholder{color:var(--grey,#9ca3af)}
+.modal-form textarea{resize:vertical;min-height:80px}
+.modal-submit{width:100%;padding:14px;background:var(--green,#2d7a5f);color:#fff;border:none;border-radius:6px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background .3s;margin-top:6px;letter-spacing:.3px}
+.modal-submit:hover{background:#246b52}
+.modal-fine{text-align:center;font-size:12px;color:var(--grey,#9ca3af);margin-top:16px;font-weight:300}
+.modal-success{text-align:center;padding:40px 36px 44px}
+.modal-success .check{width:56px;height:56px;border-radius:50%;background:var(--green,#2d7a5f);color:#fff;font-size:28px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.modal-success h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--text-black,#111827);margin-bottom:10px}
+.modal-success p{font-size:14px;line-height:1.6;color:var(--dark-grey,#6b7280);font-weight:300;max-width:300px;margin:0 auto}
+</style>
+
+<div class="modal-overlay" id="inquiryModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modalFormView">
+      <div class="modal-head">
+        <h3 id="modalTitle">Get in Touch</h3>
+        <p id="modalSubtitle">We'll respond within one business day.</p>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="inquiryForm" onsubmit="return submitModal(event)">
+          <input type="hidden" name="form_type" id="modalType">
+          <div class="form-row">
+            <label for="mName">Full Name</label>
+            <input type="text" id="mName" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="mEmail">Email Address</label>
+            <input type="email" id="mEmail" name="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-row">
+            <label for="mPhone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="mPhone" name="phone" placeholder="(555) 555-5555">
+          </div>
+          <div class="form-row" id="msgRow" style="display:none">
+            <label for="mMsg">Message <span class="opt">(optional)</span></label>
+            <textarea id="mMsg" name="message" placeholder="Tell us a bit about what you're looking for..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="modal-submit" id="modalBtn">Submit</button>
+        </form>
+        <p class="modal-fine">Your information is kept confidential and never shared.</p>
+      </div>
+    </div>
+    <div id="modalSuccessView" style="display:none">
+      <div class="modal-success">
+        <div class="check">&#10003;</div>
+        <h3 id="successTitle">Thank You!</h3>
+        <p id="successMsg">We've received your information and will be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var configs={
+    newsletter:{title:'Join Our Newsletter',subtitle:'Stay updated on new projects, investment opportunities, and company news.',button:'Subscribe',email:'investors@lonetreecompanies.com',showMessage:false,successTitle:"You're Subscribed!",successMsg:"You'll receive updates on new projects and investment opportunities."},
+    investment:{title:'Request Investment Materials',subtitle:'Receive the current offering details, project overview, and underwriting summary.',button:'Request Materials',email:'investors@lonetreecompanies.com',showMessage:true,successTitle:'Request Received!',successMsg:'Our investor relations team will send you the materials shortly.'},
+    partner:{title:'Start a Conversation',subtitle:'Tell us about your organization and how we might work together.',button:'Get in Touch',email:'info@lonetreecompanies.com',showMessage:true,successTitle:'Message Sent!',successMsg:'A member of our team will reach out to you within one business day.'}
+  };
+  var overlay=document.getElementById('inquiryModal'),formView=document.getElementById('modalFormView'),successView=document.getElementById('modalSuccessView'),form=document.getElementById('inquiryForm'),currentType='';
+  window.openModal=function(type){
+    var c=configs[type]||configs.partner;currentType=type;
+    document.getElementById('modalTitle').textContent=c.title;
+    document.getElementById('modalSubtitle').textContent=c.subtitle;
+    document.getElementById('modalBtn').textContent=c.button;
+    document.getElementById('modalType').value=type;
+    document.getElementById('msgRow').style.display=c.showMessage?'block':'none';
+    document.getElementById('successTitle').textContent=c.successTitle;
+    document.getElementById('successMsg').textContent=c.successMsg;
+    formView.style.display='block';successView.style.display='none';form.reset();
+    overlay.classList.add('active');document.body.style.overflow='hidden';
+  };
+  window.closeModal=function(){overlay.classList.remove('active');document.body.style.overflow='';};
+  window.submitModal=function(e){
+    e.preventDefault();
+    var c=configs[currentType]||configs.partner;
+    var name=document.getElementById('mName').value,email=document.getElementById('mEmail').value,phone=document.getElementById('mPhone').value,msg=document.getElementById('mMsg').value;
+    var subject=encodeURIComponent('[Lone Tree Website] '+c.title);
+    var body=encodeURIComponent('Name: '+name+'
+Email: '+email+(phone?'
+Phone: '+phone:'')+(msg?'
+Message: '+msg:''));
+    /* For production: replace mailto with Formspree endpoint (e.g. action="https://formspree.io/f/YOUR_ID") or FormSubmit */
+    window.open('mailto:'+c.email+'?subject='+subject+'&body='+body,'_self');
+    formView.style.display='none';successView.style.display='block';
+    return false;
+  };
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  document.querySelectorAll('[data-modal]').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault();openModal(el.getAttribute('data-modal'));});
+  });
+})();
+</script>
+<!-- End Inquiry Modal System -->
+</body>
+</html>

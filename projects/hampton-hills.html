@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hampton Hills — Lone Tree Companies</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--off-white:#fafafa;--light-grey:#f3f4f6;--mid-grey:#e5e7eb;--grey:#9ca3af;--dark-grey:#6b7280;--navy:#1a2744;--navy-light:#2c3e5a;--navy-faint:rgba(26,39,68,.04);--navy-border:rgba(26,39,68,.12);--text-black:#111827;--text-body:#374151;--text-caption:#6b7280;--border:#e5e7eb;--border-light:#f0f0f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;color:var(--text-black);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px 72px;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all .4s}
+.nav.scrolled{padding:16px 72px}
+.nav-logo{text-decoration:none}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--text-black);letter-spacing:1px}
+.nav-wordmark span{color:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--dark-grey);text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-login{padding:10px 28px!important;background:var(--navy)!important;color:#fff!important;border-radius:6px;font-weight:600!important;font-size:12px!important;transition:all .3s!important}
+.nav-login:hover{background:var(--navy-light)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* SECTIONS — compact */
+.section{padding:48px 72px;border-bottom:1px solid var(--border)}
+.section-alt{background:var(--light-grey)}
+.section-label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:20px;height:2px;background:var(--navy)}
+.section-label.center{justify-content:center}
+.section-label.white{color:rgba(255,255,255,.7)}
+.section-label.white::before{background:rgba(255,255,255,.4)}
+.section h2{font-family:'Playfair Display',serif;font-size:30px;line-height:1.25;font-weight:500;margin-bottom:10px}
+.section h2 em{font-style:italic;color:var(--navy)}
+.section-inner{max-width:1200px;margin:0 auto}
+
+/* BREADCRUMB */
+.breadcrumb{padding:12px 72px;font-size:13px;color:var(--dark-grey);background:var(--white);border-bottom:1px solid var(--border-light);margin-top:68px}
+.breadcrumb a{color:var(--navy);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb span{margin:0 8px;color:var(--grey)}
+
+/* DETAIL HERO */
+.detail-hero{width:100%;height:400px;background:linear-gradient(135deg,#e8eaed 0%,#d1d5db 50%,#e8eaed 100%);position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.detail-hero .loc-badge{position:absolute;top:20px;left:20px;padding:5px 14px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:4px;font-size:11px;font-weight:600;color:var(--navy);letter-spacing:1px;text-transform:uppercase}
+.detail-hero .project-status{position:absolute;top:20px;right:20px;padding:4px 12px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.status-capital-raise{background:rgba(180,130,50,.12);color:#8a6520;border:1px solid rgba(180,130,50,.25)}
+.status-dev{background:rgba(59,125,221,.12);color:#2c3e5a;border:1px solid rgba(59,125,221,.2)}
+.status-construction{background:rgba(45,122,95,.12);color:#2d7a5f;border:1px solid rgba(45,122,95,.2)}
+.detail-hero-overlay{width:100%;padding:36px 72px;background:linear-gradient(transparent 0%,rgba(26,39,68,.75) 100%)}
+.detail-hero-overlay h1{font-family:'Playfair Display',serif;font-size:42px;font-weight:500;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:14px}
+.hero-tag{display:inline-block;padding:3px 10px;background:rgba(180,130,50,.2);color:#f0d68a;border:1px solid rgba(180,130,50,.35);border-radius:4px;font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;vertical-align:middle}
+.detail-hero-overlay .hero-summary{font-size:15px;font-weight:300;color:rgba(255,255,255,.75);max-width:700px;line-height:1.55;margin-top:8px}
+.detail-hero .placeholder-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:13px;color:var(--dark-grey);font-weight:500;letter-spacing:1px;text-transform:uppercase}
+
+/* GALLERY + METRICS STRIP — combined tight zone */
+.gallery-metrics-zone{background:var(--light-grey);border-bottom:1px solid var(--border)}
+.gallery-strip{padding:0 72px}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:100px 100px;gap:6px;max-width:1200px;margin:0 auto;padding:20px 0 0}
+.gallery-item{background:linear-gradient(135deg,var(--mid-grey) 0%,var(--light-grey) 100%);border-radius:6px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s}
+.gallery-item:hover{opacity:.85;transform:scale(1.02)}
+.gallery-item.active{outline:2px solid var(--navy);outline-offset:-2px;opacity:1}
+.gallery-item:first-child{grid-row:1/-1}
+.gallery-item .placeholder{font-size:10px;color:var(--dark-grey);font-weight:500;letter-spacing:1px;text-transform:uppercase}
+
+/* KEY METRICS — tight inline bar */
+.metrics-bar{padding:16px 72px;background:var(--white);border-bottom:1px solid var(--border)}
+.detail-metrics{display:flex;justify-content:space-between;max-width:1200px;margin:0 auto;text-align:center}
+.detail-metrics .metric .val{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--text-black);line-height:1.2}
+.detail-metrics .metric .lab{font-size:10px;font-weight:500;color:var(--dark-grey);letter-spacing:1.5px;text-transform:uppercase}
+
+/* CITY PARTNERSHIP — full-width narrative + 4-col grid */
+.city-narrative{font-size:15px;line-height:1.75;color:var(--text-body);font-weight:300;max-width:900px;margin-top:16px;margin-bottom:28px}
+.city-narrative strong{font-weight:500;color:var(--text-black)}
+.city-insights-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.city-insight{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:0 0 10px 10px;padding:20px}
+.city-insight .cd-label{font-size:11px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.city-insight .cd-value{font-size:13px;color:var(--text-body);line-height:1.5;font-weight:300}
+
+/* ENGAGEMENT TIMELINE — inline with colored bg */
+.engagement-strip{margin-top:28px;background:var(--navy);border-radius:10px;padding:28px 32px}
+.engagement-strip h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:20px}
+.timeline-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.timeline-row::before{content:'';position:absolute;top:6px;left:calc(12.5%);right:calc(12.5%);height:2px;background:rgba(255,255,255,.2)}
+.timeline-step{text-align:center;position:relative;padding:0 12px}
+.timeline-dot{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.8);margin:0 auto 10px;position:relative;z-index:2}
+.timeline-date{font-size:11px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.timeline-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.45;font-weight:300}
+
+/* MARKET THESIS — side-by-side with accent bg */
+.thesis-section{background:linear-gradient(135deg,var(--navy-faint) 0%,var(--light-grey) 100%)}
+.thesis-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:20px}
+.thesis-grid > div > p{font-size:14px;line-height:1.75;color:var(--text-body);font-weight:300}
+.thesis-point{padding:16px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.thesis-point:first-child{padding-top:0}
+.thesis-point:last-child{border-bottom:none}
+.thesis-point .num{font-family:'Playfair Display',serif;font-size:24px;font-weight:300;color:var(--navy);opacity:.3}
+.thesis-point h4{font-size:14px;font-weight:600;color:var(--text-black);margin-bottom:3px}
+.thesis-point p{font-size:13px;line-height:1.5;color:var(--dark-grey);font-weight:300}
+
+/* STRATEGY CARDS — colored card tops */
+.strategy-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.strategy-card{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.strategy-card-accent{height:4px;background:var(--navy)}
+.strategy-card-accent.green{background:#2d7a5f}
+.strategy-card-accent.gold{background:#c8941e}
+.strategy-card-body{padding:24px}
+.strategy-card h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:500;color:var(--text-black);margin-bottom:14px}
+.strategy-params{list-style:none}
+.strategy-params li{padding:10px 0;border-bottom:1px solid var(--border-light);display:grid;grid-template-columns:1fr;gap:2px;font-size:13px}
+.strategy-params li:last-child{border-bottom:none}
+.strategy-params .label{font-weight:600;color:var(--navy);letter-spacing:.5px;font-size:11px}
+.strategy-params .value{color:var(--text-body);font-weight:300;line-height:1.5}
+
+/* PROJECT TIMELINE — compact */
+.project-timeline{display:flex;align-items:flex-start;justify-content:space-between;position:relative;margin-top:24px;padding:0 16px}
+.project-timeline::before{content:'';position:absolute;top:10px;left:calc(16px + 7px);right:calc(16px + 7px);height:2px;background:var(--mid-grey)}
+.project-timeline .tl-line-done{position:absolute;top:10px;left:calc(16px + 7px);height:2px;background:#2d7a5f}
+.tl-milestone{flex:1;text-align:center;position:relative;z-index:2}
+.tl-dot{width:16px;height:16px;border-radius:50%;margin:2px auto 10px;border:2px solid var(--mid-grey);background:var(--white)}
+.tl-dot.done{background:#2d7a5f;border-color:#2d7a5f;position:relative}
+.tl-dot.done::after{content:'\2713';color:#fff;font-size:9px;font-weight:700;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.tl-dot.current{background:#c8941e;border-color:#c8941e;animation:pulse 2s infinite}
+.tl-dot.future{background:var(--white);border-color:var(--grey)}
+.tl-date{font-size:10px;font-weight:700;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.tl-name{font-size:12px;font-weight:600;color:var(--text-black);margin-bottom:2px}
+.tl-status{font-size:10px;color:var(--dark-grey);font-weight:400;text-transform:uppercase;letter-spacing:.5px}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,148,30,.4)}50%{box-shadow:0 0 0 6px rgba(200,148,30,0)}}
+
+/* INVESTMENT SECTION — navy */
+.section-navy{background:var(--navy);color:#fff;padding:48px 72px;border-bottom:none}
+.section-navy h2{color:#fff;font-size:28px}
+.section-navy h2 em{color:rgba(255,255,255,.5)}
+.section-navy .subtitle{font-size:14px;color:rgba(255,255,255,.6);font-weight:300;margin-bottom:28px;max-width:500px}
+.invest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:28px}
+.invest-item{padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:8px;text-align:center}
+.invest-item .inv-label{font-size:10px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.invest-item .inv-value{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;color:#fff}
+.invest-body{font-size:14px;line-height:1.7;color:rgba(255,255,255,.6);font-weight:300;max-width:800px;margin-bottom:24px}
+.invest-actions{display:flex;gap:12px}
+.btn-invest{padding:12px 28px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:.5px;text-decoration:none;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none}
+.btn-invest.primary{background:#fff;color:var(--navy)}
+.btn-invest.primary:hover{background:var(--light-grey)}
+.btn-invest.outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-invest.outline:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.05)}
+
+/* IMPACT METRICS — colored cards */
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px;margin-bottom:20px}
+.impact-metric{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;border-top:3px solid var(--navy)}
+.impact-metric .imp-val{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.impact-metric .imp-lab{font-size:12px;font-weight:400;color:var(--dark-grey);line-height:1.4}
+.impact-body{font-size:14px;line-height:1.7;color:var(--text-body);font-weight:300;max-width:800px}
+
+/* RENDERING GALLERY */
+.rendering-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+.rendering-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);transition:all .4s}
+.rendering-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.rendering-card.featured{grid-column:1/-1}
+.rendering-img{height:300px;overflow:hidden;position:relative}
+.rendering-card.featured .rendering-img{height:420px}
+.rendering-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.rendering-card:hover .rendering-img img{transform:scale(1.03)}
+.rendering-caption{padding:20px 24px;background:#fff}
+.rendering-caption .rc-loc{font-size:10px;font-weight:600;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.rendering-caption h4{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--text-black);margin-bottom:6px}
+.rendering-caption p{font-size:13px;color:var(--dark-grey);font-weight:300;line-height:1.6}
+
+/* FLOOR PLANS */
+.plans-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:24px}
+.plan-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .4s}
+.plan-card:hover{border-color:var(--navy-border);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.plan-img{height:260px;overflow:hidden;background:var(--light-grey)}
+.plan-img img{width:100%;height:100%;object-fit:cover}
+.plan-info{padding:18px 22px}
+.plan-info .pi-label{font-size:10px;font-weight:600;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.plan-info h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text-black);margin-bottom:4px}
+.plan-info p{font-size:12px;color:var(--dark-grey);font-weight:300;line-height:1.5}
+@media(max-width:1024px){.rendering-grid{grid-template-columns:1fr}.plans-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.plans-grid{grid-template-columns:1fr}}
+
+/* RELATED PROJECTS */
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:20px}
+.related-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px;transition:all .3s;text-decoration:none;display:block}
+.related-card:hover{border-color:var(--navy-border);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.related-card .rc-location{font-size:10px;font-weight:600;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.related-card h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--text-black);margin-bottom:8px}
+.related-card .rc-meta{display:flex;gap:20px;font-size:12px;color:var(--dark-grey)}
+.related-card .rc-meta span{display:flex;align-items:center;gap:5px}
+.related-card .rc-meta .rc-dot{width:6px;height:6px;border-radius:50%;background:var(--grey)}
+.related-card .rc-link{display:inline-block;margin-top:12px;font-size:12px;font-weight:600;color:var(--navy);letter-spacing:.5px}
+
+/* CTA */
+.section-cta{text-align:center;border-top:3px solid var(--navy);padding:48px 72px}
+.section-cta h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:500;color:var(--text-black);margin-bottom:8px}
+.section-cta p{font-size:14px;color:var(--dark-grey);font-weight:300;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.5}
+.btn-cta{display:inline-block;padding:12px 36px;background:var(--navy);color:#fff;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.5px;text-decoration:none;text-transform:uppercase;transition:all .3s}
+.btn-cta:hover{background:var(--navy-light)}
+
+/* FOOTER */
+.footer{padding:80px 72px 40px;background:var(--navy);color:rgba(255,255,255,.6)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand .bn{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#fff}
+.footer-brand p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.4);margin-top:12px;max-width:280px}
+.footer-col h5{font-size:11px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:12px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;padding-top:24px;font-size:12px;color:rgba(255,255,255,.25)}
+.footer-bottom a{color:rgba(255,255,255,.25);text-decoration:none;margin-left:24px}
+.footer-col a.footer-newsletter{display:inline-block;margin-top:8px;padding:10px 20px;background:#fff;color:var(--navy);border-radius:5px;font-weight:600;font-size:13px;letter-spacing:.5px;transition:all .3s}.footer-newsletter:hover{background:rgba(255,255,255,.85);color:var(--navy)!important;transform:translateY(-2px)}
+
+/* ANIMATION */
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .nav-hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:20px 24px;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid var(--border-light);font-size:14px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-login{margin-top:8px;text-align:center}
+  .nav{padding:16px 24px}
+  .breadcrumb{padding:10px 24px;margin-top:56px}
+  .detail-hero{height:280px}
+  .detail-hero-overlay{padding:24px}
+  .detail-hero-overlay h1{font-size:32px}
+  .section,.section-navy,.section-cta{padding:36px 24px}
+  .gallery-strip{padding:0 24px}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto;padding:16px 0 0}
+  .gallery-item{height:80px}
+  .gallery-item:first-child{grid-row:auto}
+  .metrics-bar{padding:14px 24px}
+  .detail-metrics{flex-wrap:wrap;gap:12px;justify-content:center}
+  .detail-metrics .metric{min-width:100px}
+  .city-insights-grid{grid-template-columns:repeat(2,1fr)}
+  .thesis-grid{grid-template-columns:1fr;gap:32px}
+  .strategy-cards-grid{grid-template-columns:1fr}
+  .project-timeline{flex-direction:column;gap:16px;align-items:stretch;padding:0}
+  .project-timeline::before{display:none}
+  .project-timeline .tl-line-done{display:none}
+  .tl-milestone{text-align:left;display:flex;gap:12px;align-items:flex-start}
+  .tl-dot{margin:0;flex-shrink:0}
+  .invest-grid{grid-template-columns:repeat(2,1fr)}
+  .impact-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .related-grid{grid-template-columns:1fr}
+  .timeline-row{grid-template-columns:repeat(2,1fr);gap:20px}
+  .timeline-row::before{display:none}
+  .engagement-strip{padding:20px 24px}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .invest-actions{flex-direction:column}
+}
+@media(max-width:640px){
+  .nav{padding:14px 20px}
+  .breadcrumb{padding:8px 20px}
+  .detail-hero{height:220px}
+  .detail-hero-overlay h1{font-size:26px}
+  .section,.section-navy,.section-cta{padding:28px 20px}
+  .metrics-bar{padding:12px 20px}
+  .detail-metrics .metric .val{font-size:20px}
+  .gallery-strip{padding:0 20px}
+  .impact-grid{grid-template-columns:1fr 1fr}
+  .footer{padding:40px 20px 20px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="/"><img src="../media/LTC Logo.png" alt="Lone Tree Companies" class="nav-logo-img" style="height:36px;width:auto;display:block;"></a>
+  <div class="nav-hamburger" id="navToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/projects.html" class="active">Projects</a>
+    <a href="/team.html">Team</a>
+    <a href="/partner.html">Partner</a>
+    <a href="/learn.html">Learn</a>
+    <a href="/contact.html">Contact</a>
+    <a href="https://lonetree.investnext.com/" target="_blank" class="nav-login">Investor Portal</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/projects.html">Projects</a>
+  <span>&rarr;</span>
+  <span>Hampton Hills</span>
+</div>
+
+<!-- HERO -->
+<section class="detail-hero" id="hero" style="background:url('../media/hampton Hills site 1.png') center/cover no-repeat">
+  <div class="loc-badge">Richmond, Kentucky</div>
+  <div class="project-status status-capital-raise">Capital Raise</div>
+  <div class="detail-hero-overlay">
+    <h1>Hampton Hills <span class="hero-tag">Investment Opportunity</span></h1>
+    <p class="hero-summary">Flagship cottage-style build-to-rent community on the I-75 corridor south of Lexington, designed for working families in one of Kentucky's strongest growth corridors.</p>
+  </div>
+</section>
+
+<!-- GALLERY THUMBNAILS -->
+<div class="gallery-strip">
+  <div class="gallery-grid">
+    <div class="gallery-item active" data-bg="url('../media/hampton Hills site 1.png') center/cover no-repeat" data-label="Site Aerial" style="background:url('../media/hampton Hills site 1.png') center/cover no-repeat"><span class="placeholder" style="color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">Site Aerial</span></div>
+    <div class="gallery-item" data-bg="url('../media/hampton hills site 2.jpg') center/cover no-repeat" data-label="Community Rendering" style="background:url('../media/hampton hills site 2.jpg') center/cover no-repeat"><span class="placeholder" style="color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">Rendering</span></div>
+    <div class="gallery-item" data-bg="url('../media/hampton Hills site 3.jpg') center/cover no-repeat" data-label="Site Plan" style="background:url('../media/hampton Hills site 3.jpg') center/cover no-repeat"><span class="placeholder" style="color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">Site Plan</span></div>
+    <div class="gallery-item" data-bg="url('../media/hampton hills plan 1.png') center/cover no-repeat" data-label="The Cedar — Floor Plan" style="background:url('../media/hampton hills plan 1.png') center/cover no-repeat"><span class="placeholder" style="color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">The Cedar</span></div>
+    <div class="gallery-item" data-bg="url('../media/hampton hills plan 2.png') center/cover no-repeat" data-label="The Aspen — Floor Plan" style="background:url('../media/hampton hills plan 2.png') center/cover no-repeat"><span class="placeholder" style="color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">The Aspen</span></div>
+  </div>
+</div>
+
+<!-- KEY METRICS — tight bar right under gallery -->
+<div class="metrics-bar">
+  <div class="detail-metrics">
+    <div class="metric"><div class="val">97</div><div class="lab">BTR Units</div></div>
+    <div class="metric"><div class="val">22</div><div class="lab">BTR Acres</div></div>
+    <div class="metric"><div class="val">87</div><div class="lab">Total Acres</div></div>
+    <div class="metric"><div class="val">$55K&ndash;$95K</div><div class="lab">Target HHI</div></div>
+    <div class="metric"><div class="val">$1,250&ndash;$1,750</div><div class="lab">Target Rent</div></div>
+    <div class="metric"><div class="val">Spring &rsquo;26</div><div class="lab">Start</div></div>
+  </div>
+</div>
+
+<!-- INVESTMENT OPPORTUNITY (NAVY) — moved up, right below KPIs -->
+<section class="section-navy">
+  <div class="section-inner">
+    <div class="section-label white">Investment Opportunity</div>
+    <h2>Hampton Hills Fund I</h2>
+    <div class="subtitle">506(b) private placement for qualified investors</div>
+
+    <div class="invest-grid">
+      <div class="invest-item">
+        <div class="inv-label">Structure</div>
+        <div class="inv-value">LP/GP Equity Partnership</div>
+      </div>
+      <div class="invest-item">
+        <div class="inv-label">Offering</div>
+        <div class="inv-value">506(b) Regulation D</div>
+      </div>
+      <div class="invest-item">
+        <div class="inv-label">Minimum</div>
+        <div class="inv-value">Contact for Details</div>
+      </div>
+      <div class="invest-item">
+        <div class="inv-label">Term</div>
+        <div class="inv-value">Development + Stabilization</div>
+      </div>
+    </div>
+
+    <p class="invest-body">Hampton Hills represents Lone Tree's flagship investment offering &mdash; a ground-up BTR development in a market with demonstrated housing demand, secured entitlements, and a city partnership that de-risks the development process. Full investment details, projections, and offering documents are available through our investor portal.</p>
+
+    <div class="invest-actions">
+      <a href="/contact.html" class="btn-invest primary">Request Investment Materials</a>
+      <a href="#" class="btn-invest outline">Access Investor Portal</a>
+    </div>
+  </div>
+</section>
+
+<!-- CITY PARTNERSHIP — balanced layout -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">City Partnership</div>
+    <h2>How Richmond shaped <em>Hampton Hills</em></h2>
+
+    <p class="city-narrative">Our engagement with Richmond began 14 months before we acquired the Hampton Hills site. Through meetings with city planners, the economic development authority, and council members, we built a detailed understanding of Richmond's housing landscape &mdash; what was missing, who was underserved, and where new development would have the greatest community impact. <strong>Hampton Hills isn't a project we brought to Richmond. It's a project Richmond helped us design.</strong></p>
+
+    <div class="city-insights-grid">
+      <div class="city-insight">
+        <div class="cd-label">Housing Gap</div>
+        <div class="cd-value">Richmond's rental inventory lags household formation by 3:1, with limited new construction in the pipeline</div>
+      </div>
+      <div class="city-insight">
+        <div class="cd-label">Target Demographic</div>
+        <div class="cd-value">Working families earning $55K&ndash;$95K &mdash; teachers, healthcare workers, light manufacturing employees</div>
+      </div>
+      <div class="city-insight">
+        <div class="cd-label">Location Guidance</div>
+        <div class="cd-value">City identified the I-75 south corridor as the priority growth area with infrastructure capacity</div>
+      </div>
+      <div class="city-insight">
+        <div class="cd-label">Design Input</div>
+        <div class="cd-value">Council requested cottage-scale density with community amenities, not conventional apartment product</div>
+      </div>
+    </div>
+
+    <!-- Engagement Timeline — navy accent strip -->
+    <div class="engagement-strip">
+      <h4>Engagement Process</h4>
+      <div class="timeline-row">
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Q1 2024</div>
+          <div class="timeline-desc">Initial meetings with Richmond Planning &amp; Zoning and Economic Development Authority</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Q2 2024</div>
+          <div class="timeline-desc">Housing needs assessment completed; I-75 corridor sites evaluated with city input</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Q3 2024</div>
+          <div class="timeline-desc">Land acquisition; floor plans and site layout designed in collaboration with city staff</div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Q1 2025</div>
+          <div class="timeline-desc">Full entitlements secured; city council unanimously approved development plan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET THESIS -->
+<section class="section thesis-section">
+  <div class="section-inner">
+    <div class="section-label">Market Thesis</div>
+    <h2>Why Richmond, <em>Kentucky</em></h2>
+    <div class="thesis-grid">
+      <div>
+        <p>Richmond sits at the intersection of demographic growth, housing scarcity, and institutional demand. Located along the I-75 corridor between Lexington and Knoxville, this market benefits from Eastern Kentucky University's steady enrollment, Baptist Health's regional expansion, and a growing light manufacturing base. Existing rental stock is dated and undersupplied relative to household formation.</p>
+      </div>
+      <div>
+        <div class="thesis-point">
+          <div class="num">01</div>
+          <div><h4>I-75 Corridor Growth</h4><p>Strategic positioning between Lexington and Knoxville captures migration and commuter demand.</p></div>
+        </div>
+        <div class="thesis-point">
+          <div class="num">02</div>
+          <div><h4>Housing Supply Gap</h4><p>Rental inventory lags household formation by 3:1 with limited new construction.</p></div>
+        </div>
+        <div class="thesis-point">
+          <div class="num">03</div>
+          <div><h4>Institutional Anchors</h4><p>EKU, Baptist Health, and light manufacturing provide stable employment drivers.</p></div>
+        </div>
+        <div class="thesis-point">
+          <div class="num">04</div>
+          <div><h4>Municipal Alignment</h4><p>City leadership actively welcomed attainable housing, streamlining entitlements.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPMENT STRATEGY -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">Development Strategy</div>
+    <h2>Designed with the city, built for the <em>community</em></h2>
+
+    <div class="strategy-cards-grid">
+      <div class="strategy-card">
+        <div class="strategy-card-accent"></div>
+        <div class="strategy-card-body">
+          <h4>Product Design</h4>
+          <ul class="strategy-params">
+            <li><span class="label">Floor Plans</span><span class="value">3 plans &mdash; 2BR/1BA (850 sf), 3BR/2BA (1,100 sf), 3BR/2.5BA (1,350 sf)</span></li>
+            <li><span class="label">Unit Mix</span><span class="value">97 cottage-style single-family detached rentals</span></li>
+            <li><span class="label">Target Renter</span><span class="value">Working families earning $55K&ndash;$95K</span></li>
+            <li><span class="label">Target Rents</span><span class="value">$1,250&ndash;$1,750/month</span></li>
+            <li><span class="label">Amenities</span><span class="value">Clubhouse, playground, walking paths, pet-friendly yards</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-card-accent green"></div>
+        <div class="strategy-card-body">
+          <h4>Entitlements &amp; Engineering</h4>
+          <ul class="strategy-params">
+            <li><span class="label">Zoning</span><span class="value">R-3 residential, fully entitled for BTR use</span></li>
+            <li><span class="label">Approvals</span><span class="value">All entitlements secured; council voted unanimously</span></li>
+            <li><span class="label">Infrastructure</span><span class="value">City water and sewer with capacity commitments</span></li>
+            <li><span class="label">Timeline</span><span class="value">Horizontal site work beginning Spring 2026</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="strategy-card">
+        <div class="strategy-card-accent gold"></div>
+        <div class="strategy-card-body">
+          <h4>Municipal Partnership</h4>
+          <ul class="strategy-params">
+            <li><span class="label">City Engagement</span><span class="value">14-month pre-acquisition dialogue with city planning and council</span></li>
+            <li><span class="label">Community Fit</span><span class="value">Floor plans and density shaped by city input</span></li>
+            <li><span class="label">Workforce Focus</span><span class="value">Rent levels calibrated to serve the local workforce without subsidy</span></li>
+            <li><span class="label">Long-Term Commitment</span><span class="value">In-house property management ensures ongoing stewardship</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY RENDERINGS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Community Renderings</div>
+    <h2>Visualizing <em>Hampton Hills</em></h2>
+    <div class="rendering-grid">
+      <div class="rendering-card featured">
+        <div class="rendering-img"><img src="../media/hampton Hills site 1.png" alt="Hampton Hills — Aerial Site View"></div>
+        <div class="rendering-caption">
+          <div class="rc-loc">Richmond, Kentucky</div>
+          <h4>Hampton Hills — Aerial Overview</h4>
+          <p>97-unit cottage-style build-to-rent community on 22 acres along the I-75 corridor south of Lexington, designed for working families in one of Kentucky's strongest growth corridors.</p>
+        </div>
+      </div>
+      <div class="rendering-card">
+        <div class="rendering-img"><img src="../media/hampton hills site 2.jpg" alt="Hampton Hills — Community Rendering"></div>
+        <div class="rendering-caption">
+          <div class="rc-loc">Community Detail</div>
+          <h4>Streetscape &amp; Cottage Design</h4>
+          <p>Cottage-scale architecture with individual yards, community amenities, and pedestrian-friendly streetscapes throughout the neighborhood.</p>
+        </div>
+      </div>
+      <div class="rendering-card">
+        <div class="rendering-img"><img src="../media/hampton Hills site 3.jpg" alt="Hampton Hills — Site Plan"></div>
+        <div class="rendering-caption">
+          <div class="rc-loc">Site Planning</div>
+          <h4>Master Site Layout</h4>
+          <p>Thoughtfully designed site plan incorporating green space, walking paths, and community gathering areas alongside 97 detached rental homes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">Floor Plans</div>
+    <h2>Three plans designed for <em>real families</em></h2>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-img"><img src="../media/hampton hills plan 1.png" alt="The Cedar Floor Plan"></div>
+        <div class="plan-info">
+          <div class="pi-label">Plan 1</div>
+          <h4>The Cedar</h4>
+          <p>2 Bed / 1 Bath &mdash; 850 SF<br>Efficient single-story layout ideal for young professionals and small families. Open-concept living with private yard.</p>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-img"><img src="../media/hampton hills plan 2.png" alt="The Aspen Floor Plan"></div>
+        <div class="plan-info">
+          <div class="pi-label">Plan 2</div>
+          <h4>The Aspen</h4>
+          <p>3 Bed / 2 Bath &mdash; 1,100 SF<br>Mid-size family plan with dedicated dining space, full master suite, and two-car parking. The community's most popular configuration.</p>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-img"><img src="../media/hampton hills plan 3.png" alt="The Willow Floor Plan"></div>
+        <div class="plan-info">
+          <div class="pi-label">Plan 3</div>
+          <h4>The Willow</h4>
+          <p>3 Bed / 2.5 Bath &mdash; 1,350 SF<br>Premium two-story plan with upper-level bedrooms, spacious living areas, and a half bath on the main level for guests.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT TIMELINE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Development Timeline</div>
+    <h2>From city engagement to <em>stabilization</em></h2>
+
+    <div class="project-timeline">
+      <div class="tl-line-done" style="width:calc((100% - 32px - 16px) * 0.5)"></div>
+
+      <div class="tl-milestone">
+        <div class="tl-date">Q1 2024</div>
+        <div class="tl-dot done"></div>
+        <div class="tl-name">City Engagement</div>
+        <div class="tl-status">Completed</div>
+      </div>
+      <div class="tl-milestone">
+        <div class="tl-date">Q3 2024</div>
+        <div class="tl-dot done"></div>
+        <div class="tl-name">Land Acquisition</div>
+        <div class="tl-status">Completed</div>
+      </div>
+      <div class="tl-milestone">
+        <div class="tl-date">Q1 2025</div>
+        <div class="tl-dot done"></div>
+        <div class="tl-name">Entitlements</div>
+        <div class="tl-status">Completed</div>
+      </div>
+      <div class="tl-milestone">
+        <div class="tl-date">Now</div>
+        <div class="tl-dot current"></div>
+        <div class="tl-name">Capital Raise</div>
+        <div class="tl-status">In Progress</div>
+      </div>
+      <div class="tl-milestone">
+        <div class="tl-date">Spring '26</div>
+        <div class="tl-dot future"></div>
+        <div class="tl-name">Construction</div>
+        <div class="tl-status">Planned</div>
+      </div>
+      <div class="tl-milestone">
+        <div class="tl-date">2027</div>
+        <div class="tl-dot future"></div>
+        <div class="tl-name">Stabilization</div>
+        <div class="tl-status">Target</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY IMPACT -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Community Impact</div>
+    <h2>What Hampton Hills means for <em>Richmond</em></h2>
+
+    <div class="impact-grid">
+      <div class="impact-metric">
+        <div class="imp-val">97</div>
+        <div class="imp-lab">New Homes for Working Families</div>
+      </div>
+      <div class="impact-metric">
+        <div class="imp-val">150+</div>
+        <div class="imp-lab">Construction Jobs Created</div>
+      </div>
+      <div class="impact-metric">
+        <div class="imp-val">$2.8M</div>
+        <div class="imp-lab">Est. Annual Property Tax Revenue</div>
+      </div>
+      <div class="impact-metric">
+        <div class="imp-val">12+</div>
+        <div class="imp-lab">Full-Time Management Jobs</div>
+      </div>
+    </div>
+
+    <p class="impact-body">Every Lone Tree community is designed to generate lasting value for the municipalities that welcome us. Hampton Hills will provide Richmond with much-needed attainable rental housing while contributing meaningful tax revenue and creating both construction and permanent employment.</p>
+  </div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label">Related Projects</div>
+    <h2>More from <em>Kentucky</em></h2>
+
+    <div class="related-grid">
+      <a href="/projects/hampton-hills.html" class="related-card">
+        <div class="rc-location">Elizabethtown, Kentucky</div>
+        <h4>Oak Hills</h4>
+        <div class="rc-meta">
+          <span><span class="rc-dot"></span> 128 Units</span>
+          <span><span class="rc-dot" style="background:rgba(59,125,221,.6)"></span> Engineering</span>
+          <span>Build-to-Rent</span>
+        </div>
+        <span class="rc-link">View Project Details &rarr;</span>
+      </a>
+      <a href="/projects/hampton-hills.html" class="related-card">
+        <div class="rc-location">Richmond, Kentucky</div>
+        <h4>Woodgate</h4>
+        <div class="rc-meta">
+          <span><span class="rc-dot"></span> 97 Units</span>
+          <span><span class="rc-dot" style="background:rgba(59,125,221,.6)"></span> Design</span>
+          <span>Build-to-Rent</span>
+        </div>
+        <span class="rc-link">View Project Details &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-cta">
+  <h3>Interested in Hampton Hills?</h3>
+  <p>Schedule a conversation with our capital markets team to learn more about this opportunity.</p>
+  <a href="/contact.html" class="btn-cta">Get in Touch</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="bn"><img src="data:image/png;base64,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" alt="Lone Tree Companies" style="height:28px;width:auto;filter:brightness(0) invert(1);"></div><p>Building attainable communities through city partnership, disciplined capital, and integrated execution.</p></div>
+    <div class="footer-col"><h5>Company</h5><a href="/about.html">About</a><a href="/team.html">Team</a><a href="/projects.html">Projects</a></div>
+    <div class="footer-col"><h5>Partners</h5><a href="/partner.html">Become a Partner</a><a href="/investment-process.html">Investment Process</a><a href="https://lonetree.investnext.com/" target="_blank">Investor Portal</a></div>
+    <div class="footer-col"><h5>Connect</h5><a href="/contact.html">Contact Us</a><a href="/news.html">News &amp; Media</a><a href="#" class="footer-newsletter" data-modal="newsletter">Sign Up for Our Newsletter →</a><a>1606 Spanish Fork Pkwy, Suite 102</a><a>Spanish Fork, UT 84660</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Lone Tree Companies</span><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Disclosures</a></div></div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+window.addEventListener('scroll', function() {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var links = document.querySelector('.nav-links');
+  if(toggle && links){
+    toggle.addEventListener('click', function(){
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ toggle.classList.remove('open'); links.classList.remove('open'); });
+    });
+  }
+})();
+(function() {
+  var hero = document.getElementById('hero');
+  var items = document.querySelectorAll('.gallery-item[data-bg]');
+  items.forEach(function(item) {
+    item.addEventListener('click', function() {
+      hero.style.background = item.dataset.bg;
+      items.forEach(function(i) { i.classList.remove('active'); });
+      item.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>

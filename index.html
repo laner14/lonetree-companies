@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lone Tree Companies — Home</title>
+<link rel="icon" type="image/png" href="media/Lone Tree Symbol.png">
+<link rel="apple-touch-icon" href="media/Lone Tree Symbol.png">
+<meta name="description" content="Lone Tree Companies builds attainable build-to-rent communities through city partnerships, disciplined capital, and integrated execution across Kentucky, Indiana, Ohio, and Utah.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lone Tree Companies — Attainable Build-to-Rent Communities">
+<meta property="og:description" content="Building attainable build-to-rent communities through city partnerships, disciplined capital, and integrated execution.">
+<meta property="og:site_name" content="Lone Tree Companies">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lone Tree Companies — Attainable Build-to-Rent Communities">
+<meta name="twitter:description" content="Building attainable build-to-rent communities through city partnerships and disciplined capital.">
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Lone Tree Companies",
+  "description": "Lone Tree Companies builds attainable build-to-rent communities through city partnerships, disciplined capital, and integrated execution across the American South and Mountain West.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1606 Spanish Fork Pkwy, Suite 102",
+    "addressLocality": "Spanish Fork",
+    "addressRegion": "UT",
+    "postalCode": "84660",
+    "addressCountry": "US"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #ffffff;
+  --off-white: #fafafa;
+  --light-grey: #f3f4f6;
+  --mid-grey: #e5e7eb;
+  --grey: #9ca3af;
+  --dark-grey: #6b7280;
+  --navy: #1a2744;
+  --navy-light: #2c3e5a;
+  --navy-faint: rgba(26,39,68,.04);
+  --navy-border: rgba(26,39,68,.12);
+  --text-black: #111827;
+  --text-body: #374151;
+  --text-caption: #6b7280;
+  --border: #e5e7eb;
+  --border-light: #f0f0f0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;color:var(--text-black);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 72px;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-light);transition:all .4s}
+.nav.scrolled{padding:14px 72px;box-shadow:0 1px 12px rgba(0,0,0,.04)}
+.nav-logo{text-decoration:none}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--navy);letter-spacing:1px}
+.nav-wordmark span{color:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--dark-grey);text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-login{padding:10px 28px!important;background:var(--navy)!important;color:#fff!important;border-radius:6px;font-weight:600!important;font-size:12px!important;letter-spacing:.5px;transition:all .3s!important}
+.nav-login:hover{background:var(--navy-light)!important}
+
+/* HERO */
+.hero{height:70vh;min-height:480px;max-height:680px;display:flex;flex-direction:column;justify-content:center;padding:120px 72px 60px;position:relative;background:var(--navy);overflow:hidden}
+.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero-video video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover}
+.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(26,39,68,.72) 0%,rgba(26,39,68,.55) 50%,rgba(26,39,68,.4) 100%);z-index:1}
+.hero-eyebrow{font-size:12px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:3px;text-transform:uppercase;margin-bottom:32px;display:flex;align-items:center;gap:12px;position:relative;z-index:2;animation:fadeIn .8s ease .2s both}
+.hero-eyebrow::before{content:'';width:40px;height:2px;background:rgba(255,255,255,.6)}
+.hero h1{font-family:'Playfair Display',serif;font-size:64px;line-height:1.1;font-weight:500;max-width:800px;margin-bottom:28px;position:relative;z-index:2;color:#fff;animation:fadeIn .8s ease .4s both}
+.hero h1 em{font-style:italic;color:rgba(255,255,255,.9)}
+.hero-sub{font-size:18px;line-height:1.7;color:rgba(255,255,255,.8);max-width:600px;font-weight:300;margin-bottom:44px;position:relative;z-index:2;animation:fadeIn .8s ease .6s both}
+.hero-ctas{display:flex;gap:16px;position:relative;z-index:2;animation:fadeIn .8s ease .8s both}
+.cta-navy{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:#fff;color:var(--navy);border:none;border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;letter-spacing:.5px;text-decoration:none;transition:all .3s}
+.cta-navy:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cta-outline{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;text-decoration:none;transition:all .3s}
+.cta-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+/* TICKER */
+.ticker{padding:48px 72px;border-bottom:1px solid var(--border);display:flex;justify-content:center;gap:80px;background:var(--white)}
+.ticker-item{text-align:center}
+.ticker-item .val{font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.ticker-item .lab{font-size:11px;font-weight:600;color:var(--grey);letter-spacing:1.5px;text-transform:uppercase}
+
+/* SECTIONS */
+.section{padding:100px 72px;border-bottom:1px solid var(--border)}
+.section-grey{background:var(--light-grey)}
+.section-label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:20px;height:2px;background:var(--navy)}
+.section-label.center{justify-content:center}
+.section h2{font-family:'Playfair Display',serif;font-size:38px;line-height:1.25;font-weight:500;color:var(--text-black);margin-bottom:16px}
+.section h2 em{font-style:italic;color:var(--navy)}
+.section-inner{max-width:1200px;margin:0 auto}
+
+/* THESIS */
+.thesis-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.thesis-grid p{font-size:16px;line-height:1.8;color:var(--text-body);font-weight:300}
+.thesis-point{padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:start;transition:all .3s}
+.thesis-point:first-child{padding-top:0}
+.thesis-point:last-child{border-bottom:none}
+.thesis-point:hover{padding-left:8px}
+.thesis-point .num{font-family:'Playfair Display',serif;font-size:32px;font-weight:300;color:var(--navy);opacity:.3}
+.thesis-point h4{font-size:16px;font-weight:600;color:var(--text-black);margin-bottom:6px}
+.thesis-point p{font-size:14px;line-height:1.6;color:var(--dark-grey);font-weight:300}
+
+/* MUNICIPAL */
+.municipal{padding:100px 72px;background:var(--navy);border-bottom:none;position:relative;overflow:hidden}
+.municipal::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.03) 0%,transparent 60%)}
+.municipal-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.municipal .section-label{color:rgba(255,255,255,.5)}
+.municipal .section-label::before{background:rgba(255,255,255,.3)}
+.municipal h2{color:#fff}
+.municipal h2 em{color:rgba(255,255,255,.6)}
+.municipal>div>p{font-size:17px;line-height:1.8;color:rgba(255,255,255,.6);font-weight:300;margin-bottom:56px}
+.muni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.muni-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:28px;transition:all .4s}
+.muni-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);transform:translateY(-3px)}
+.muni-card h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px}
+.muni-card p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);font-weight:300}
+
+/* PLATFORM */
+.platform-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px}
+.platform-entity{background:var(--light-grey);padding:36px 24px;text-align:center;transition:all .4s;position:relative}
+.platform-entity:first-child{border-radius:8px 0 0 8px}
+.platform-entity:last-child{border-radius:0 8px 8px 0}
+.platform-entity:hover{background:var(--mid-grey)}
+.platform-entity h4{font-size:15px;font-weight:600;color:var(--text-black);margin-bottom:4px}
+.platform-entity .role{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.platform-entity p{font-size:13px;line-height:1.6;color:var(--dark-grey);font-weight:300}
+.platform-entity .arrow{position:absolute;right:-14px;top:50%;transform:translateY(-50%);width:28px;height:28px;background:var(--white);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:14px;z-index:2}
+
+/* FOOTER */
+.footer{padding:80px 72px 40px;background:var(--navy);color:rgba(255,255,255,.6)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand .bn{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#fff}
+.footer-brand p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.4);margin-top:12px;max-width:280px}
+.footer-col h5{font-size:11px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:12px;transition:color .3s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;padding-top:24px;font-size:12px;color:rgba(255,255,255,.25)}
+.footer-bottom a{color:rgba(255,255,255,.25);text-decoration:none;margin-left:24px}
+
+/* NEWSLETTER CTA */
+.newsletter-cta{padding:80px 72px;background:var(--light-grey);border-bottom:1px solid var(--border);text-align:center}
+.newsletter-inner{max-width:600px;margin:0 auto}
+.newsletter-label{font-size:11px;font-weight:600;color:var(--navy);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;justify-content:center}
+.newsletter-label::before,.newsletter-label::after{content:'';width:20px;height:2px;background:var(--navy)}
+.newsletter-cta h2{font-family:'Playfair Display',serif;font-size:32px;line-height:1.25;font-weight:500;color:var(--text-black);margin-bottom:12px}
+.newsletter-cta h2 em{font-style:italic;color:var(--navy)}
+.newsletter-sub{font-size:15px;line-height:1.7;color:var(--dark-grey);font-weight:300;margin-bottom:32px}
+.newsletter-form{max-width:460px;margin:0 auto}
+.newsletter-field{display:flex;gap:0;border-radius:6px;overflow:hidden;border:1.5px solid var(--border);transition:border-color .3s;background:#fff}
+.newsletter-field:focus-within{border-color:var(--navy)}
+.newsletter-field input{flex:1;padding:14px 18px;border:none;outline:none;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text-black);background:transparent}
+.newsletter-field input::placeholder{color:var(--grey)}
+.newsletter-field button{padding:14px 28px;background:var(--navy);color:#fff;border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:background .3s;white-space:nowrap}
+.newsletter-field button:hover{background:var(--navy-light)}
+.newsletter-fine{font-size:12px;color:var(--grey);margin-top:14px;font-weight:300}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* PORTFOLIO BAR */
+.portfolio-bar{background:var(--navy);border-radius:0;padding:48px 72px;display:flex;justify-content:center}
+.portfolio-bar-inner{max-width:1200px;width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:32px;align-items:center}
+.port-stat{text-align:center;position:relative}
+.port-stat:not(:last-child)::after{content:'';position:absolute;right:-16px;top:10%;height:80%;width:1px;background:rgba(255,255,255,.12)}
+.port-stat .num{font-family:'Playfair Display',serif;font-size:42px;font-weight:600;color:#fff;line-height:1}
+.port-stat .unit{font-size:14px;color:rgba(255,255,255,.5);font-weight:400;margin-top:6px}
+.port-stat .label{font-size:11px;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-top:10px}
+@media(max-width:1024px){.portfolio-bar-inner{grid-template-columns:repeat(3,1fr)}.portfolio-bar{padding:36px 24px}}
+@media(max-width:640px){.portfolio-bar-inner{grid-template-columns:1fr 1fr}.portfolio-bar{padding:32px 20px}}
+
+@media(max-width:1024px){.nav{padding:16px 24px}.hero{padding:100px 24px 40px;min-height:400px}.hero h1{font-size:40px}.section{padding:60px 24px}.thesis-grid,.muni-grid{grid-template-columns:1fr}.platform-row{grid-template-columns:1fr 1fr}.ticker{flex-wrap:wrap;gap:40px}.footer-inner{grid-template-columns:1fr 1fr}.newsletter-cta{padding:60px 24px}.newsletter-cta h2{font-size:26px}}
+.footer-col a.footer-newsletter{display:inline-block;margin-top:8px;padding:10px 20px;background:#fff;color:var(--navy);border-radius:5px;font-weight:600;font-size:13px;letter-spacing:.5px;transition:all .3s}.footer-newsletter:hover{background:rgba(255,255,255,.85);color:var(--navy)!important;transform:translateY(-2px)}
+
+/* HAMBURGER MENU */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+@media(max-width:768px){
+  .nav-hamburger{display:flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:20px 24px;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid var(--border-light);font-size:14px}
+  .nav-links a:last-child{border-bottom:none}
+  .nav-login{margin-top:8px;text-align:center}
+}
+
+@media(max-width:640px){
+  .nav{padding:14px 20px}
+  .hero{padding:100px 20px 60px;min-height:80vh}
+  .hero h1{font-size:32px}
+  .hero-sub{font-size:15px}
+  .section{padding:40px 20px}
+  .section h2{font-size:24px}
+  .ticker{gap:24px}
+  .ticker .t-item .t-val{font-size:28px}
+  .platform-row{grid-template-columns:1fr}
+  .footer{padding:40px 20px 20px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+  .newsletter-cta{padding:40px 20px}
+  .newsletter-cta h2{font-size:22px}
+  .newsletter-field{flex-direction:column;border:none;gap:10px}
+  .newsletter-field input{border:1.5px solid var(--border);border-radius:6px;padding:14px 16px}
+  .newsletter-field button{border-radius:6px;padding:14px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="/"><img src="media/LTC Logo.png" alt="Lone Tree Companies" class="nav-logo-img" style="height:36px;width:auto;display:block;"></a>
+  <div class="nav-hamburger" id="navToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links">
+    <a href="/about.html">About</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/team.html">Team</a>
+    <a href="/partner.html">Partner</a>
+    <a href="/learn.html">Learn</a>
+    <a href="/contact.html">Contact</a>
+    <a href="https://lonetree.investnext.com/" target="_blank" class="nav-login">Investor Portal</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-video">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="media/Lone Tree_Website 2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-eyebrow">Real Estate Development & Investment</div>
+  <h1>Where disciplined capital meets <em>community impact</em></h1>
+  <p class="hero-sub">We target attainable housing in high-growth, undersupplied metros with strong demographic tailwinds. By controlling land, entitlements, construction, and property management in-house, we deliver institutional-quality execution with the agility of a vertically integrated operator.</p>
+  <div class="hero-ctas">
+    <a href="/projects.html" class="cta-navy">View Current Projects →</a>
+    <a href="/about.html" class="cta-outline">Our Approach</a>
+  </div>
+</section>
+
+<section class="portfolio-bar">
+  <div class="portfolio-bar-inner">
+    <div class="port-stat">
+      <div class="num">500+</div>
+      <div class="unit">acres</div>
+      <div class="label">Land Controlled</div>
+    </div>
+    <div class="port-stat">
+      <div class="num">2,500+</div>
+      <div class="unit">lots</div>
+      <div class="label">Entitled Pipeline</div>
+    </div>
+    <div class="port-stat">
+      <div class="num">$50M+</div>
+      <div class="unit">AUM</div>
+      <div class="label">Land &amp; Development</div>
+    </div>
+    <div class="port-stat">
+      <div class="num">4</div>
+      <div class="unit">states</div>
+      <div class="label">Active Markets</div>
+    </div>
+    <div class="port-stat">
+      <div class="num">4</div>
+      <div class="unit">companies</div>
+      <div class="label">Integrated Platform</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner thesis-grid">
+    <div>
+      <div class="section-label">Investment Thesis</div>
+      <h2>Attainable housing in markets that <em>welcome</em> development</h2>
+      <p style="margin-top:8px">Most institutional capital chases the same 15 metros. We target fully entitled, construction-ready sites in markets where household formation, attainable price points, and city alignment converge. This disciplined market selection places our BTR product directly in the path of the strongest demand drivers — delivering favorable basis, strong city support, and rents that serve the real workforce.</p>
+    </div>
+    <div>
+      <div class="thesis-point"><div class="num">01</div><div><h4>Municipal Alignment</h4><p>We engage cities before we acquire — shaping projects around community needs so every site has deep local support.</p></div></div>
+      <div class="thesis-point"><div class="num">02</div><div><h4>Integrated Execution</h4><p>Four entities covering the full lifecycle — from land acquisition through stabilized operations — under one platform.</p></div></div>
+      <div class="thesis-point"><div class="num">03</div><div><h4>Attainable by Design</h4><p>Housing priced for households earning $55K–$95K. Market-rate rents without subsidy complexity or LIHTC constraints.</p></div></div>
+      <div class="thesis-point"><div class="num">04</div><div><h4>Disciplined Capital Stack</h4><p>Institutional-grade fund structure with transparent reporting, quarterly distributions, and aligned GP/LP economics.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="municipal">
+  <div class="municipal-inner">
+    <div class="section-label center">City Partnership</div>
+    <h2>Development that cities <em>champion</em></h2>
+    <p>Our most durable competitive advantage isn't financial — it's relational. By designing around what communities actually need, we earn the kind of municipal partnership that accelerates entitlements, reduces risk, and creates developments that last.</p>
+    <div class="muni-grid">
+      <div class="muni-card"><h4>Community-Informed Design</h4><p>Projects shaped by city leadership input on density, pricing, and community goals from day one.</p></div>
+      <div class="muni-card"><h4>Workforce-Calibrated Rents</h4><p>Market-rate housing serving teachers, nurses, and first responders — no subsidies required.</p></div>
+      <div class="muni-card"><h4>Long-Term Stewardship</h4><p>In-house property management maintains communities to the standards cities expect long-term.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:16px">
+      <div class="section-label center">Integrated Platform</div>
+      <h2>Four entities. One accountability chain.</h2>
+      <p style="font-size:16px;color:var(--dark-grey);font-weight:300;margin-top:8px">Every phase of the development lifecycle is managed in-house.</p>
+    </div>
+    <div class="platform-row">
+      <div class="platform-entity"><h4>Capital Partners</h4><div class="role">Capital Formation</div><p>Institutional capital formation, investor relations, and strategic capital deployment. $20M raised to date.</p><div class="arrow">→</div></div>
+      <div class="platform-entity"><h4>Land & Development</h4><div class="role">Acquisitions</div><p>Demographic-driven site selection, land acquisition, and entitlement mastery across a pipeline of 2,500+ entitled lots.</p><div class="arrow">→</div></div>
+      <div class="platform-entity"><h4>Communities</h4><div class="role">Construction</div><p>Internal construction management overseeing site improvements, trade management, and quality/cost discipline from horizontal through vertical delivery.</p><div class="arrow">→</div></div>
+      <div class="platform-entity"><h4>Ameritrue</h4><div class="role">Property Mgmt</div><p>Full-service property management across four states. Resident experience, operational continuity, and long-term community stewardship.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section class="newsletter-cta">
+  <div class="newsletter-inner">
+    <div class="newsletter-label">Investor Updates</div>
+    <h2>Stay ahead of our <em>next opportunity</em></h2>
+    <p class="newsletter-sub">Quarterly project updates, market insights, and early access to new investment opportunities — delivered to principals and allocators across our network.</p>
+    <form class="newsletter-form" onsubmit="return handleNewsletter(event)">
+      <div class="newsletter-field">
+        <input type="email" placeholder="you@company.com" required id="nlEmail">
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="newsletter-fine">No spam. Unsubscribe anytime. Your information is never shared.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="bn"><img src="data:image/png;base64,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" alt="Lone Tree Companies" style="height:28px;width:auto;filter:brightness(0) invert(1);"></div><p>Building attainable communities through city partnership, disciplined capital, and integrated execution.</p></div>
+    <div class="footer-col"><h5>Company</h5><a href="/about.html">About</a><a href="/team.html">Team</a><a href="/projects.html">Projects</a></div>
+    <div class="footer-col"><h5>Partners</h5><a href="/partner.html">Become a Partner</a><a href="/investment-process.html">Investment Process</a><a href="https://lonetree.investnext.com/" target="_blank">Investor Portal</a></div>
+    <div class="footer-col"><h5>Connect</h5><a href="/contact.html">Contact Us</a><a href="/news.html">News &amp; Media</a><a href="#" class="footer-newsletter" data-modal="newsletter">Sign Up for Our Newsletter →</a><a>1606 Spanish Fork Pkwy, Suite 102</a><a>Spanish Fork, UT 84660</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Lone Tree Companies</span><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Disclosures</a></div></div>
+</footer>
+<script>window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)})</script>
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var links = document.querySelector('.nav-links');
+  if(toggle && links){
+    toggle.addEventListener('click', function(){
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+    // Close menu when a link is clicked
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ toggle.classList.remove('open'); links.classList.remove('open'); });
+    });
+  }
+})();
+</script>
+
+<!-- Inquiry Modal System -->
+<style>
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,39,68,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.modal-overlay.active{opacity:1;pointer-events:all}
+.modal-box{background:#fff;border-radius:12px;width:440px;max-width:92vw;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.18);transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.4,0,.2,1);position:relative}
+.modal-overlay.active .modal-box{transform:translateY(0) scale(1)}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;background:rgba(255,255,255,.15);border-radius:50%;color:#fff;font-size:20px;line-height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:1}
+.modal-close:hover{background:rgba(255,255,255,.3)}
+.modal-head{background:var(--navy,#1a2744);padding:32px 36px 28px;border-radius:12px 12px 0 0}
+.modal-head h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#fff;margin-bottom:8px}
+.modal-head p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);font-weight:300}
+.modal-body{padding:28px 36px 32px}
+.modal-form .form-row{margin-bottom:18px}
+.modal-form label{display:block;font-size:13px;font-weight:600;color:var(--text-black,#111827);margin-bottom:6px;letter-spacing:.3px}
+.modal-form label .opt{font-weight:400;color:var(--grey,#9ca3af);font-size:12px}
+.modal-form input,.modal-form textarea{width:100%;padding:12px 14px;border:1.5px solid var(--border,#e5e7eb);border-radius:6px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--text-black,#111827);transition:border-color .2s;outline:none;background:#fff}
+.modal-form input:focus,.modal-form textarea:focus{border-color:var(--navy,#1a2744)}
+.modal-form input::placeholder,.modal-form textarea::placeholder{color:var(--grey,#9ca3af)}
+.modal-form textarea{resize:vertical;min-height:80px}
+.modal-submit{width:100%;padding:14px;background:var(--green,#2d7a5f);color:#fff;border:none;border-radius:6px;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background .3s;margin-top:6px;letter-spacing:.3px}
+.modal-submit:hover{background:#246b52}
+.modal-fine{text-align:center;font-size:12px;color:var(--grey,#9ca3af);margin-top:16px;font-weight:300}
+.modal-success{text-align:center;padding:40px 36px 44px}
+.modal-success .check{width:56px;height:56px;border-radius:50%;background:var(--green,#2d7a5f);color:#fff;font-size:28px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.modal-success h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--text-black,#111827);margin-bottom:10px}
+.modal-success p{font-size:14px;line-height:1.6;color:var(--dark-grey,#6b7280);font-weight:300;max-width:300px;margin:0 auto}
+</style>
+
+<div class="modal-overlay" id="inquiryModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modalFormView">
+      <div class="modal-head">
+        <h3 id="modalTitle">Get in Touch</h3>
+        <p id="modalSubtitle">We'll respond within one business day.</p>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" id="inquiryForm" onsubmit="return submitModal(event)">
+          <input type="hidden" name="form_type" id="modalType">
+          <div class="form-row">
+            <label for="mName">Full Name</label>
+            <input type="text" id="mName" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label for="mEmail">Email Address</label>
+            <input type="email" id="mEmail" name="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-row">
+            <label for="mPhone">Phone <span class="opt">(optional)</span></label>
+            <input type="tel" id="mPhone" name="phone" placeholder="(555) 555-5555">
+          </div>
+          <div class="form-row" id="msgRow" style="display:none">
+            <label for="mMsg">Message <span class="opt">(optional)</span></label>
+            <textarea id="mMsg" name="message" placeholder="Tell us a bit about what you're looking for..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="modal-submit" id="modalBtn">Submit</button>
+        </form>
+        <p class="modal-fine">Your information is kept confidential and never shared.</p>
+      </div>
+    </div>
+    <div id="modalSuccessView" style="display:none">
+      <div class="modal-success">
+        <div class="check">&#10003;</div>
+        <h3 id="successTitle">Thank You!</h3>
+        <p id="successMsg">We've received your information and will be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var configs={
+    newsletter:{title:'Join Our Newsletter',subtitle:'Stay updated on new projects, investment opportunities, and company news.',button:'Subscribe',email:'investors@lonetreecompanies.com',showMessage:false,successTitle:"You're Subscribed!",successMsg:"You'll receive updates on new projects and investment opportunities."},
+    investment:{title:'Request Investment Materials',subtitle:'Receive the current offering details, project overview, and underwriting summary.',button:'Request Materials',email:'investors@lonetreecompanies.com',showMessage:true,successTitle:'Request Received!',successMsg:'Our investor relations team will send you the materials shortly.'},
+    partner:{title:'Start a Conversation',subtitle:'Tell us about your organization and how we might work together.',button:'Get in Touch',email:'info@lonetreecompanies.com',showMessage:true,successTitle:'Message Sent!',successMsg:'A member of our team will reach out to you within one business day.'}
+  };
+  var overlay=document.getElementById('inquiryModal'),formView=document.getElementById('modalFormView'),successView=document.getElementById('modalSuccessView'),form=document.getElementById('inquiryForm'),currentType='';
+  window.openModal=function(type){
+    var c=configs[type]||configs.partner;currentType=type;
+    document.getElementById('modalTitle').textContent=c.title;
+    document.getElementById('modalSubtitle').textContent=c.subtitle;
+    document.getElementById('modalBtn').textContent=c.button;
+    document.getElementById('modalType').value=type;
+    document.getElementById('msgRow').style.display=c.showMessage?'block':'none';
+    document.getElementById('successTitle').textContent=c.successTitle;
+    document.getElementById('successMsg').textContent=c.successMsg;
+    formView.style.display='block';successView.style.display='none';form.reset();
+    overlay.classList.add('active');document.body.style.overflow='hidden';
+  };
+  window.closeModal=function(){overlay.classList.remove('active');document.body.style.overflow='';};
+  window.submitModal=function(e){
+    e.preventDefault();
+    var c=configs[currentType]||configs.partner;
+    var name=document.getElementById('mName').value,email=document.getElementById('mEmail').value,phone=document.getElementById('mPhone').value,msg=document.getElementById('mMsg').value;
+    var subject=encodeURIComponent('[Lone Tree Website] '+c.title);
+    var body=encodeURIComponent('Name: '+name+'
+Email: '+email+(phone?'
+Phone: '+phone:'')+(msg?'
+Message: '+msg:''));
+    /* For production: replace mailto with Formspree endpoint (e.g. action="https://formspree.io/f/YOUR_ID") or FormSubmit */
+    window.open('mailto:'+c.email+'?subject='+subject+'&body='+body,'_self');
+    formView.style.display='none';successView.style.display='block';
+    return false;
+  };
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  document.querySelectorAll('[data-modal]').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault();openModal(el.getAttribute('data-modal'));});
+  });
+})();
+</script>
+<script>
+function handleNewsletter(e){
+  e.preventDefault();
+  var email=document.getElementById('nlEmail').value;
+  var subject=encodeURIComponent('[Lone Tree Website] New Newsletter Subscriber');
+  var body=encodeURIComponent('A new subscriber has signed up for the Lone Tree investor newsletter.\n\nSubscriber email: '+email+'\n\nThis is an automated notification from the Lone Tree website.');
+  window.open('mailto:lane@lonetreeusa.com?subject='+subject+'&body='+body,'_self');
+  document.getElementById('nlEmail').value='';
+  return false;
+}
+</script>
+<!-- End Inquiry Modal System -->
+</body>
+</html>
